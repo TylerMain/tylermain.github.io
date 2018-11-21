@@ -160,7 +160,7 @@ input, select, textarea {
 
 		a:hover {
 			border-bottom-color: transparent;
-			color: #00D3B7;
+			color: #00D3B7; /* thumbnail highlight border */
 		}
 
 	strong, b {
@@ -180,7 +180,7 @@ input, select, textarea {
 		font-weight: 400;
 		line-height: 1.25;
 		margin: 0 0 0.5em 0;
-		color: #555;
+		color: #fff; /* Panel Title color */
 	}
 
 		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -813,7 +813,7 @@ input, select, textarea {
 		top: 0;
 		width: 22.5em;
 		height: 100%;
-		background: #fff;
+		background: #476466; /* the side panel background color */
 		outline: 0;
 		overflow-x: hidden;
 		overflow-y: auto;

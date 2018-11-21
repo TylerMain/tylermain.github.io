@@ -17,16 +17,108 @@
 		<!-- Main -->
 			<div id="main">
 
+				<!-- Title Bar -->
+					<head>
+					<style>
+					.navbar {
+					    overflow: hidden;
+					    background-color: #333;
+					    font-family: Arial, Helvetica, sans-serif;
+					}
+
+					.navbar a {
+					    float: left;
+					    font-size: 16px;
+					    color: white;
+					    padding: 14px 16px;
+					    text-align: center;
+					    text-decoration: none;
+					    border-bottom: 5px solid grey;
+					}
+
+					.dropdown {
+						float: left;
+					    display: inline-block;
+					    overflow: hidden;
+					}
+
+					.dropdown .dropbtn {
+						display: inline-block;
+					    font-size: 16px;    
+					    border: none;
+					    outline: none;
+					    color: white;
+					    padding: 14px 16px;
+					    box-sizing:border-box;
+					    text-align: center;
+					    background-color: inherit;
+					    font-family: inherit;
+					    margin: 0;
+					    border-bottom: 5px solid grey;
+					    border-radius: 0px;
+					}
+
+					.navbar a:hover, .dropdown:hover .dropbtn {
+					    background-color: grey;
+					    border-bottom: 5px solid white;
+					}
+
+					.dropdown-content {
+					    display: none;
+					    position: absolute;
+					    background-color: #333;
+					    min-width: 50px;
+					    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+					    z-index: 2;
+					}
+
+					.dropdown-content a {
+					    float: none;
+					    color: black;
+					    padding: 12px 16px;
+					    text-decoration: none;
+					    display: block;
+					    text-align: left;
+					}
+
+					.dropdown-content a:hover {
+					    background-color: grey;
+					    border-bottom: 5px solid white;
+					}
+
+					.dropdown:hover .dropdown-content {
+					    display: block;
+					}
+					</style>
+					</head>
+					<body>
+
+					<div class="navbar">
+					  <a href="#home">Home</a>
+					  <a href="#news">News</a>
+					  <div class="dropdown">
+					    <button class="dropbtn">Dropdown 
+					      <i class="fa fa-caret-down"></i>
+					    </button>
+					    <div class="dropdown-content">
+					      <a href="#">Link 1</a>
+					      <a href="#">Link 2</a>
+					      <a href="#">Link 3</a>
+					    </div>
+					  </div> 
+					</div>
+
 				<!-- Header -->
 					<header id="header">
-						<h1>Lens</h1>
-						<p>Just another fine responsive site template by <a href="http://html5up.net">HTML5 UP</a></p>
-						<ul class="icons">
+						<!--h1>Lens</h1-->
+						<p>↑ Why you do this button?</p>
+						<p>I made this =)</p>
+						<!--ul class="icons">
 							<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
 							<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
 							<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
 							<li><a href="#" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
-						</ul>
+						</ul-->
 					</header>
 
 				<!-- Thumbnail -->
@@ -96,7 +188,7 @@
 				<!-- Footer -->
 					<footer id="footer">
 						<ul class="copyright">
-							<li>&copy; Untitled.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a>.</li>
+							<li>&copy; Untitled.</li><li>Web Design: Modified "Lens" by <a href="http://html5up.net">HTML5 UP</a>.</li>
 						</ul>
 					</footer>
 
