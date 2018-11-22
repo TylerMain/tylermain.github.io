@@ -837,6 +837,7 @@ input, select, textarea {
 			z-index: 1;
 			background-position: 0.5em 0.5em;
 			left: 0;
+			opacity: 0;
 		}
 
 		body.fullscreen #main {
@@ -868,6 +869,7 @@ input, select, textarea {
 			}
 
 				#main .toggle {
+					background-position: 0.5em 0.5em;
 					display: block;
 				}
 
@@ -1171,7 +1173,7 @@ input, select, textarea {
 				cursor: pointer;
 				z-index: 1;
 				right: 0;
-				background-position: calc(100% - 0.75em) 0.75em;
+				background-position: calc(100% - 0.75em) 0.75em; /* calc(100% - 0.75em) 0.75em;*/
 			}
 
 			#viewer .inner .nav-next,
@@ -1307,10 +1309,9 @@ input, select, textarea {
 		@media screen and (max-width: 980px) {
 
 			#viewer {
-				width: 100%;
+				width: calc(100% - 19em);
 			}
-
-				#viewer .inner .toggle {
+				/*#viewer .inner .toggle {
 					-moz-transition: opacity 0.75s ease;
 					-webkit-transition: opacity 0.75s ease;
 					-ms-transition: opacity 0.75s ease;
@@ -1318,7 +1319,7 @@ input, select, textarea {
 					background-image: url("images/open.svg");
 					opacity: 0;
 					right: 0;
-				}
+				}*/
 
 				body.fullscreen #viewer .inner .toggle {
 					opacity: 1;
@@ -1335,7 +1336,7 @@ input, select, textarea {
 			#viewer .inner .nav-next,
 			#viewer .inner .nav-previous {
 				background-image: url("images/arrow-small.svg");
-				background-size: 32px 32px;
+				background-size: 32px 32px; 
 			}
 
 			body.fullscreen #viewer .inner .toggle {
