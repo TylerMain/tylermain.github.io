@@ -801,7 +801,7 @@ input, select, textarea {
 				font-size: 1.5rem;
 			}
 
-/* Main */
+/* Main */ /*This is the home page*/
 
 	#main {
 		-moz-transition: opacity 0.75s ease, right 0.75s ease, left 0.75s ease, visibility 0.75s;
@@ -904,6 +904,51 @@ input, select, textarea {
 
 		}
 
+/* About Page */
+
+	#about {
+		-moz-transition: opacity 0.75s ease, right 0.75s ease, left 0.75s ease, visibility 0.75s;
+		-webkit-transition: opacity 0.75s ease, right 0.75s ease, left 0.75s ease, visibility 0.75s;
+		-ms-transition: opacity 0.75s ease, right 0.75s ease, left 0.75s ease, visibility 0.75s;
+		transition: opacity 0.75s ease, right 0.75s ease, left 0.75s ease, visibility 0.75s;
+		-webkit-overflow-scrolling: touch;
+		top: 0;
+		height: 100%;
+		background: #476466; /* the side panel background color */
+		outline: 0;
+		overflow-x: hidden;
+		overflow-y: auto;
+		text-align: left;
+		visibility: visible;
+		z-index: 10000;
+	}
+
+		@media screen and (max-width: 1280px) {
+
+			#about {
+				
+			}
+		}
+
+		@media screen and (max-width: 980px) {
+
+			#about {
+				background: #476466; /* Middle size panel color */
+			}
+		}
+
+		@media screen and (max-width: 480px) {
+
+			#about {
+				-moz-transition: opacity 0.5s ease, visibility 0.5s;
+				-webkit-transition: opacity 0.5s ease, visibility 0.5s;
+				-ms-transition: opacity 0.5s ease, visibility 0.5s;
+				transition: opacity 0.5s ease, visibility 0.5s;
+				background: #476466; /* Mobile background color */
+				text-align: center;
+			}
+		}		
+
 /* Header */
 
 	#header {
@@ -917,8 +962,8 @@ input, select, textarea {
 
 		#header h2 {
 		    outline: none;
-		    font-size: 16px;
-		    padding: 13px 10px;
+		    font-size: 18px;
+		    padding: 13.5px 10px;
 		    color: white;
 		    text-align: center;
 		    background-color: #333;
@@ -938,6 +983,7 @@ input, select, textarea {
 
 			#header h2 {
 				padding: 13px 10px;
+				font-size: 16px;
 			}
 		}
 
@@ -945,13 +991,15 @@ input, select, textarea {
 
 			#header h2 {
 				padding: 13px 10px;
+				font-size: 14px;
 			}
 		}
 
 		@media screen and (max-width: 980px) {
 
 			#header h2 {
-				padding: 13px 10px;
+				padding: 12.5px 10px;
+				font-size: 13px;
 			}
 		}
 
@@ -959,6 +1007,7 @@ input, select, textarea {
 
 			#header h2 {
 				padding: 13px 10px;
+				font-size: 16px;
 			}
 		}
 
@@ -991,6 +1040,7 @@ input, select, textarea {
 		display: -webkit-flex;
 		display: -ms-flex;
 		display: flex;
+		/*display: none; /* This line hides all thumbnails */
 		-moz-flex-wrap: wrap;
 		-webkit-flex-wrap: wrap;
 		-ms-flex-wrap: wrap;
@@ -1043,6 +1093,10 @@ input, select, textarea {
 				display: none;
 			}
 
+			#thumbnails article comments {
+			display: none;
+		}
+
 			#thumbnails article.active .thumbnail:before {
 				opacity: 1;
 			}
@@ -1054,6 +1108,10 @@ input, select, textarea {
 			}
 
 		}
+
+/* Comments Button */
+	
+	
 
 /* Viewer */
 

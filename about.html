@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>I Made This =)</title> <!-- Tab Title -->
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body>
+	<audio id="sound1">
+		<source src="sounds/Ringworm by Tartanic.mp3" type="audio/mpeg">
+		Your browser does not support the audio element.
+	</audio>
+		<!-- Main -->
+			<div id="about">
+				<!-- Title Bar -->
+					<header>
+					<style>
+					.navbar {
+					    overflow: hidden;
+					    background-color: #333;
+					    font-family: Arial, Helvetica, sans-serif;
+					}
+
+					.navbar a {
+					    float: left;
+					    font-size: 18px;
+					    padding: 10px 15px;
+					    color: white;
+					    text-align: center;
+					    text-decoration: none;
+					    border-bottom: 5px solid grey;
+					}
+
+					.navbar b {
+					    float: left;
+					    font-size: 18px;
+					    padding: 10px;
+					    color: white;
+					    text-align: center;
+					    text-decoration: none;
+					    border-bottom: 5px solid grey;
+					}
+
+					.dropdown {
+						float: left;
+						display:inline-block;
+					    overflow: hidden;
+					    margin-bottom: -10px;
+					}
+
+					.navbar a:hover{
+					    background-color: grey;
+					    border-bottom: 5px solid white;
+					}
+
+					.navbar b:hover{
+					    background-color: grey;
+					    border-bottom: 5px solid white;
+					}
+
+					.dropdown-content {
+					    display: none;
+					    position: absolute;
+					    background-color: #333;
+					    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+					    z-index: 2;
+					}
+
+					.dropdown-content a {
+					    float: none;
+					    color: white;
+					    padding: 8px 10px;
+					    text-decoration: none;
+					    display: block;
+					    text-align: center;
+					}
+
+					.dropdown-content a:hover {
+					    background-color: grey;
+					    border-bottom: 5px solid white;
+					}
+
+					.dropdown:hover .dropdown-content {
+					    display: block;
+					    margin-top: -10px;
+					}
+
+					@media screen and (max-width: 1680px) {
+
+						.navbar a {
+							font-size: 16px;
+						}
+						.navbar b {
+							font-size: 16px;
+						}
+					}
+
+					@media screen and (max-width: 1280px) {
+
+						.navbar a {
+							font-size: 14px;
+						}
+						.navbar b {
+							font-size: 14px;
+						}
+					}
+
+					@media screen and (max-width: 980px) {
+
+						.navbar a {
+							font-size: 13px;
+						}
+						.navbar b {
+							font-size: 13px;
+						}
+					}
+
+					@media screen and (max-width: 480px) {
+
+						.navbar a {
+							font-size: 16px;
+						}
+						.navbar b {
+							font-size: 16px;
+						}
+					}
+
+					</style>
+					</header>
+					<body>
+
+					<div class="navbar">
+					  <a href="index.html">Home</a>
+					  <a href="about.html">About</a>
+					  <div class="dropdown">
+					    <header id="header">
+					    	<h2>Year <i class="fa fa-caret-down"></i></h2>
+					    <div class="dropdown-content">
+					      <a href="#">2019</a>
+					      <a href="#">2018</a>
+					      <a href="#">2017</a>
+					    </div>
+					  </div>
+					  <div class="dropdown">
+					    <header id="header">
+					    	<h2>Category <i class="fa fa-caret-down"></i></h2>
+					    <div class="dropdown-content">
+					      <a href="#">Flags</a>
+					      <a href="#">Portraits</a>
+					      <a href="#">Other</a>
+					    </div>
+					  </div>
+					  <b onclick="toggleAudio()" type="button">♫</b>
+					</div>
+
+				<!-- Header -->
+					<header id="header">
+						<h1>My First Heading</h1>
+
+						<p>My first paragraph.</p>
+					</header>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<ul class="copyright">
+							<li>&copy; Untitled.</li><li>Song is "Ringworm" by Tartanic</li><li>Web Design: Modified "Lens" by <a href="http://html5up.net">HTML5 UP</a>.</li>
+						</ul>
+					</footer>
+			</div>
+
+		<!-- Scripts -->
+			<script>
+				var x = document.getElementById("sound1"); 
+				var isPlaying = false;
+				function playAudio() { 
+				    x.play(); 
+				} 
+				function pauseAudio() { 
+				    x.pause(); 
+				}
+				function toggleAudio(){
+					if(isPlaying){
+						x.pause();
+						isPlaying = false;
+					}
+					else{
+						x.play();
+						isPlaying = true;
+					}
+				}
+			</script>
+
+	</body>
+</html>

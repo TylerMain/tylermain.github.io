@@ -13,6 +13,10 @@
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload-0 is-preload-1 is-preload-2">
+		<audio id="sound1">
+		<source src="sounds/Ringworm by Tartanic.mp3" type="audio/mpeg">
+		Your browser does not support the audio element.
+		</audio>
 
 		<!-- Main -->
 			<div id="main">
@@ -28,8 +32,18 @@
 
 					.navbar a {
 					    float: left;
-					    font-size: 16px;
+					    font-size: 18px;
 					    padding: 10px 15px;
+					    color: white;
+					    text-align: center;
+					    text-decoration: none;
+					    border-bottom: 5px solid grey;
+					}
+
+					.navbar b {
+					    float: left;
+					    font-size: 18px;
+					    padding: 10px;
 					    color: white;
 					    text-align: center;
 					    text-decoration: none;
@@ -48,22 +62,26 @@
 					    border-bottom: 5px solid white;
 					}
 
+					.navbar b:hover{
+					    background-color: grey;
+					    border-bottom: 5px solid white;
+					}
+
 					.dropdown-content {
 					    display: none;
 					    position: absolute;
 					    background-color: #333;
-					    width: 66.5px;
 					    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 					    z-index: 2;
 					}
 
 					.dropdown-content a {
 					    float: none;
-					    color: black;
+					    color: white;
 					    padding: 8px 10px;
 					    text-decoration: none;
 					    display: block;
-					    text-align: left;
+					    text-align: center;
 					}
 
 					.dropdown-content a:hover {
@@ -75,22 +93,81 @@
 					    display: block;
 					    margin-top: -10px;
 
+					}
+
+					.comments {
+
+					}
+
+					.comments a{
+
+					}
+
+					@media screen and (max-width: 1680px) {
+
+						.navbar a {
+							font-size: 16px;
+						}
+						.navbar b {
+							font-size: 16px;
+						}
+					}
+
+					@media screen and (max-width: 1280px) {
+
+						.navbar a {
+							font-size: 14px;
+						}
+						.navbar b {
+							font-size: 14px;
+						}
+					}
+
+					@media screen and (max-width: 980px) {
+
+						.navbar a {
+							font-size: 13px;
+						}
+						.navbar b {
+							font-size: 13px;
+						}
+					}
+
+					@media screen and (max-width: 480px) {
+
+						.navbar a {
+							font-size: 16px;
+						}
+						.navbar b {
+							font-size: 16px;
+						}
+					}
+
 					</style>
 					</header>
-					<body>
 
 					<div class="navbar">
-					  <a href="#home">Home</a>
-					  <a href="#news">News</a>
+					  <a href="index.html">Home</a>
+					  <a href="about.html">About</a>
 					  <div class="dropdown">
 					    <header id="header">
 					    	<h2>Year <i class="fa fa-caret-down"></i></h2>
 					    <div class="dropdown-content">
-					      <a href="#">Link 1</a>
-					      <a href="#">Link 2</a>
-					      <a href="#">Link 3</a>
+					      <a href="#">2019</a>
+					      <a href="#">2018</a>
+					      <a href="#">2017</a>
 					    </div>
-					  </div> 
+					  </div>
+					  <div class="dropdown">
+					    <header id="header">
+					    	<h2>Category <i class="fa fa-caret-down"></i></h2>
+					    <div class="dropdown-content">
+					      <a href="#">Flags</a>
+					      <a href="#">Portraits</a>
+					      <a href="#">Other</a>
+					    </div>
+					  </div>
+					  <b onclick="toggleAudio()" type="button">♫</b>  
 					</div>
 
 				<!-- Header -->
@@ -111,6 +188,7 @@
 							<a class="thumbnail" href="images/fulls/01.jpg" data-position="left center"><img src="images/thumbs/01.jpg" alt="" /></a>
 							<h2>Diam tempus accumsan</h2>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+							<button onclick="toggleThumbnails()" type="button">Comments</button>
 						</article>
 						<article>
 							<a class="thumbnail" href="images/fulls/02.jpg"><img src="images/thumbs/02.jpg" alt="" /></a>
@@ -169,10 +247,17 @@
 						</article>
 					</section>
 
+				<!-- Comments -->
+					<!-- begin wwww.htmlcommentbox.com -->
+ 					<div id="HCB_comment_box" style="display:none"><a href="http://www.htmlcommentbox.com">HTML Comment Box</a> is loading comments...</div>
+ 					<link rel="stylesheet" type="text/css" href="//www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" />
+ 					<script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="//www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&opts=16862&num=10&ts=1542952560393");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
+					<!-- end www.htmlcommentbox.com -->
+
 				<!-- Footer -->
 					<footer id="footer">
 						<ul class="copyright">
-							<li>&copy; Untitled.</li><li>Web Design: Modified "Lens" by <a href="http://html5up.net">HTML5 UP</a>.</li>
+							<li>&copy; Untitled.</li><li>Song is "Ringworm" by Tartanic</li><li>Web Design: Modified "Lens" by <a href="http://html5up.net">HTML5 UP</a>.</li>
 						</ul>
 					</footer>
 
@@ -183,6 +268,40 @@
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/main.js"></script>
-
+			<script> /* Button to play music */
+				var x = document.getElementById("sound1"); 
+				var isPlaying = false;
+				function playAudio() { 
+				    x.play(); 
+				} 
+				function pauseAudio() { 
+				    x.pause(); 
+				}
+				function toggleAudio(){
+					if(isPlaying){
+						x.pause();
+						isPlaying = false;
+					}
+					else{
+						x.play();
+						isPlaying = true;
+					}
+				}
+			</script>
+			<script>
+				var isShowing = true;
+				function toggleThumbnails(){
+					if(isShowing){
+						document.getElementById("thumbnails").style.display = "none";
+						document.getElementById("HCB_comment_box").style.display = "flex";
+						isShowing=false;
+					}
+					else{
+						document.getElementById("thumbnails").style.display = "flex";
+						document.getElementById("HCB_comment_box").style.display = "none";
+						isShowing=true;
+					}
+				}
+			</script>
 	</body>
 </html>
