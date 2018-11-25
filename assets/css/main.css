@@ -954,13 +954,13 @@ input, select, textarea {
 	    overflow: hidden;
 	    background-color: #333;
 	    font-family: Arial, Helvetica, sans-serif;
+	    max-width: 100%;
 	}
 
 	.navbar a {							/* Home button */
 	    float: left;
-	    font-size: 18px;
-	    padding: 10px 15px;
 	    color: white;
+	    padding: 5px;
 	    text-align: center;
 	    text-decoration: none;
 	    border-bottom: 5px solid grey;
@@ -969,9 +969,8 @@ input, select, textarea {
 
 	.navbar b {							/* About button */
 	    float: left;
-	    font-size: 18px;
-	    padding: 10px;
 	    color: white;
+	    padding: 5px;
 	    text-align: center;
 	    text-decoration: none;
 	    border-bottom: 5px solid grey;
@@ -980,9 +979,8 @@ input, select, textarea {
 
 	.navbar c {							/* Music button */
 	    float: left;
-	    font-size: 18px;
-	    padding: 10px;
 	    color: white;
+	    padding: 5px;
 	    text-align: center;
 	    text-decoration: none;
 	    border-bottom: 5px solid grey;
@@ -991,9 +989,8 @@ input, select, textarea {
 
 	.navbar d {							/* Arrow button */
 	    float: left;
-	    font-size: 18px;
-	    padding: 10px;
 	    color: white;
+	    padding: 5px;
 	    text-align: center;
 	    text-decoration: none;
 	    border-bottom: 5px solid grey;
@@ -1030,9 +1027,8 @@ input, select, textarea {
 
 	.navbar d1 { 				/* Years dropdown button */
 	    outline: none;
-	    font-size: 18px;
-	    padding: 13.5px 10px;
 	    color: white;
+	    padding: 5px;
 	    text-align: center;
 	    background-color: #333;
 	    font-family: Arial, Helvetica, sans-serif;
@@ -1043,9 +1039,8 @@ input, select, textarea {
 
 	.navbar d2 {				/* Catergory dropdown button */
 	    outline: none;
-	    font-size: 18px;
-	    padding: 13.5px 10px;
 	    color: white;
+	    padding: 5px;
 	    text-align: center;
 	    background-color: #333;
 	    font-family: Arial, Helvetica, sans-serif;
@@ -1099,101 +1094,7 @@ input, select, textarea {
 
 	}
 
-	@media screen and (max-width: 1680px) {
-
-		.navbar a {
-			font-size: 16px;
-		}
-		.navbar b {
-			font-size: 16px;
-		}
-		.navbar c {
-			font-size: 16px;
-		}
-		.navbar d {
-			font-size: 16px;
-		}
-		.navbar d1 {
-			padding: 13px 10px;
-			font-size: 16px;
-		}
-		.navbar d2 {
-			padding: 13px 10px;
-			font-size: 16px;
-		}
-	}
-
-	@media screen and (max-width: 1280px) {
-
-		.navbar a {
-			font-size: 14px;
-		}
-		.navbar b {
-			font-size: 14px;
-		}
-		.navbar c {
-			font-size: 14px;
-		}
-		.navbar d {
-			font-size: 14px;
-		}
-		.navbar d1 {
-			padding: 13px 10px;
-			font-size: 14px;
-		}
-		.navbar d2 {
-			padding: 13px 10px;
-			font-size: 14px;
-		}
-	}
-
-	@media screen and (max-width: 980px) {
-
-		.navbar a {
-			font-size: 13px;
-		}
-		.navbar b {
-			font-size: 13px;
-		}
-		.navbar c {
-			font-size: 13px;
-		}
-		.navbar d {
-			font-size: 13px;
-		}
-		.navbar d1 {
-			padding: 12.5px 10px;
-			font-size: 13px;
-		}
-		.navbar d2 {
-			padding: 12.5px 10px;
-			font-size: 13px;
-		}
-	}
-
-	@media screen and (max-width: 480px) {
-
-		.navbar a {
-			font-size: 23px;
-		}
-		.navbar b {
-			font-size: 23px;
-		}
-		.navbar c {
-			font-size: 23px;
-		}
-		.navbar d {
-			font-size: 23px;
-		}
-		.navbar d1 {
-			padding: 10px 10px;
-			font-size: 23px;
-		}
-		.navbar d2 {
-			padding: 10px 10px;
-			font-size: 23px;
-		}
-	}
+	
 
 /* Header */
 
