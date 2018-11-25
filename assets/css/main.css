@@ -948,6 +948,252 @@ input, select, textarea {
 				text-align: center;
 			}
 		}		
+/* TaskBar */
+
+	.navbar {
+	    overflow: hidden;
+	    background-color: #333;
+	    font-family: Arial, Helvetica, sans-serif;
+	}
+
+	.navbar a {							/* Home button */
+	    float: left;
+	    font-size: 18px;
+	    padding: 10px 15px;
+	    color: white;
+	    text-align: center;
+	    text-decoration: none;
+	    border-bottom: 5px solid grey;
+	    display: flex;
+	}
+
+	.navbar b {							/* About button */
+	    float: left;
+	    font-size: 18px;
+	    padding: 10px;
+	    color: white;
+	    text-align: center;
+	    text-decoration: none;
+	    border-bottom: 5px solid grey;
+	    display: flex;
+	}
+
+	.navbar c {							/* Music button */
+	    float: left;
+	    font-size: 18px;
+	    padding: 10px;
+	    color: white;
+	    text-align: center;
+	    text-decoration: none;
+	    border-bottom: 5px solid grey;
+	    display: flex;
+	}
+
+	.navbar d {							/* Arrow button */
+	    float: left;
+	    font-size: 18px;
+	    padding: 10px;
+	    color: white;
+	    text-align: center;
+	    text-decoration: none;
+	    border-bottom: 5px solid grey;
+	    display: none;
+	}
+
+	.dropdown {
+		float: left;
+		display:inline-block;
+	    overflow: hidden;
+	    margin-bottom: -10px;
+	    display: flex;
+	}
+
+	.navbar a:hover{
+	    background-color: grey;
+	    border-bottom: 5px solid white;
+	}
+
+	.navbar b:hover{
+	    background-color: grey;
+	    border-bottom: 5px solid white;
+	}
+
+	.navbar c:hover{
+	    background-color: grey;
+	    border-bottom: 5px solid white;
+	}
+
+	.navbar d:hover{
+	    background-color: grey;
+	    border-bottom: 5px solid white;
+	}
+
+	.navbar d1 { 				/* Years dropdown button */
+	    outline: none;
+	    font-size: 18px;
+	    padding: 13.5px 10px;
+	    color: white;
+	    text-align: center;
+	    background-color: #333;
+	    font-family: Arial, Helvetica, sans-serif;
+	    border-bottom: 5px solid grey;
+	    border-radius: 0px;
+	    margin-bottom: 10px;
+	}
+
+	.navbar d2 {				/* Catergory dropdown button */
+	    outline: none;
+	    font-size: 18px;
+	    padding: 13.5px 10px;
+	    color: white;
+	    text-align: center;
+	    background-color: #333;
+	    font-family: Arial, Helvetica, sans-serif;
+	    border-bottom: 5px solid grey;
+	    border-radius: 0px;
+	    margin-bottom: 10px;
+	}
+
+	.navbar d1:hover {
+		background-color: grey;
+		border-bottom: 5px solid white;
+	}
+
+	.navbar d2:hover {
+		background-color: grey;
+		border-bottom: 5px solid white;
+	}
+
+	.dropdown-content {
+	    display: none;
+	    position: absolute;
+	    background-color: #333;
+	    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	    z-index: 2;
+	}
+
+	.dropdown-content a {
+	    float: none;
+	    color: white;
+	    padding: 8px 10px;
+	    text-decoration: none;
+	    display: block;
+	    text-align: center;
+	}
+
+	.dropdown-content a:hover {
+	    background-color: grey;
+	    border-bottom: 5px solid white;
+	}
+
+	.dropdown:hover .dropdown-content {
+	    display: block;
+	    margin-top: -10px;
+	}
+
+	.comments {
+
+	}
+
+	.comments a{
+
+	}
+
+	@media screen and (max-width: 1680px) {
+
+		.navbar a {
+			font-size: 16px;
+		}
+		.navbar b {
+			font-size: 16px;
+		}
+		.navbar c {
+			font-size: 16px;
+		}
+		.navbar d {
+			font-size: 16px;
+		}
+		.navbar d1 {
+			padding: 13px 10px;
+			font-size: 16px;
+		}
+		.navbar d2 {
+			padding: 13px 10px;
+			font-size: 16px;
+		}
+	}
+
+	@media screen and (max-width: 1280px) {
+
+		.navbar a {
+			font-size: 14px;
+		}
+		.navbar b {
+			font-size: 14px;
+		}
+		.navbar c {
+			font-size: 14px;
+		}
+		.navbar d {
+			font-size: 14px;
+		}
+		.navbar d1 {
+			padding: 13px 10px;
+			font-size: 14px;
+		}
+		.navbar d2 {
+			padding: 13px 10px;
+			font-size: 14px;
+		}
+	}
+
+	@media screen and (max-width: 980px) {
+
+		.navbar a {
+			font-size: 13px;
+		}
+		.navbar b {
+			font-size: 13px;
+		}
+		.navbar c {
+			font-size: 13px;
+		}
+		.navbar d {
+			font-size: 13px;
+		}
+		.navbar d1 {
+			padding: 12.5px 10px;
+			font-size: 13px;
+		}
+		.navbar d2 {
+			padding: 12.5px 10px;
+			font-size: 13px;
+		}
+	}
+
+	@media screen and (max-width: 480px) {
+
+		.navbar a {
+			font-size: 23px;
+		}
+		.navbar b {
+			font-size: 23px;
+		}
+		.navbar c {
+			font-size: 23px;
+		}
+		.navbar d {
+			font-size: 23px;
+		}
+		.navbar d1 {
+			padding: 10px 10px;
+			font-size: 23px;
+		}
+		.navbar d2 {
+			padding: 10px 10px;
+			font-size: 23px;
+		}
+	}
 
 /* Header */
 
@@ -958,57 +1204,6 @@ input, select, textarea {
 		#header h1 {
 			font-size: 2.25em;
 			font-weight: 700;
-		}
-
-		#header h2 {
-		    outline: none;
-		    font-size: 18px;
-		    padding: 13.5px 10px;
-		    color: white;
-		    text-align: center;
-		    background-color: #333;
-		    font-family: Arial, Helvetica, sans-serif;
-		    border-bottom: 5px solid grey;
-		    border-radius: 0px;
-		    margin-bottom: 10px;
-
-		}
-
-		#header h2:hover {
-			background-color: grey;
-			border-bottom: 5px solid white;
-		}
-
-		@media screen and (max-width: 1680px) {
-
-			#header h2 {
-				padding: 13px 10px;
-				font-size: 16px;
-			}
-		}
-
-		@media screen and (max-width: 1280px) {
-
-			#header h2 {
-				padding: 13px 10px;
-				font-size: 14px;
-			}
-		}
-
-		@media screen and (max-width: 980px) {
-
-			#header h2 {
-				padding: 12.5px 10px;
-				font-size: 13px;
-			}
-		}
-
-		@media screen and (max-width: 480px) {
-
-			#header h2 {
-				padding: 13px 10px;
-				font-size: 16px;
-			}
 		}
 
 /* Footer */
