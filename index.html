@@ -248,7 +248,7 @@
 					</section>
 
 				<!-- Comments -->
-					<div id="disqus_thread"></div>
+					<div id="disqus_thread" style="display:none"></div>
 					<script>
 
 					/**
@@ -308,12 +308,12 @@
 				function toggleThumbnails(){
 					if(isShowing){
 						document.getElementById("thumbnails").style.display = "none";
-						document.getElementById("HCB_comment_box").style.display = "flex";
+						document.getElementById("disqus_thread").style.display = "flex";
 						isShowing=false;
 					}
 					else{
 						document.getElementById("thumbnails").style.display = "flex";
-						document.getElementById("HCB_comment_box").style.display = "none";
+						document.getElementById("disqus_thread").style.display = "none";
 						isShowing=true;
 					}
 				}
