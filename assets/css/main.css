@@ -1109,8 +1109,9 @@ input, select, textarea {
 	 }
 
 	 #wheel {
-	   height: 20px;
+	   height: 50px;
 	   padding: 5px;
+	   float: left;
 	   border-bottom: 5px solid grey;
 	 }
 

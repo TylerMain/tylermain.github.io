@@ -251,7 +251,7 @@
 			  var width = Math.round(wheelDrag.rotation * volumeTickWidth);
 			  volume.width(width + "px");
 
-			  var loudness = Math.round(wheelDrag.rotation / 7200);
+			  var loudness = width / 7200;
 			  var sound = document.getElementById('sound1');
 			  sound.volume = loudness;
 			}
