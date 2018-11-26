@@ -10,8 +10,10 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
+	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.0/jquery-ui.min.js"></script>
 	<body class="is-preload-0 is-preload-1 is-preload-2">
 		<audio id="sound1">
 		<source src="sounds/Ringworm by Tartanic.mp3" type="audio/mpeg">
@@ -226,7 +228,7 @@
 			        value: 80,
 			        animate: true,
 			        slide: function(event, ui) {
-			            sound1.volume = (ui.value) / 100);
+			            sound1.volume = ui.value / 100;
 			        }
 			    });
 			});
