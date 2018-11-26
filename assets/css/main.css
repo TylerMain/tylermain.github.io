@@ -1109,10 +1109,10 @@ input, select, textarea {
 	}
 	.container {
 	  position: absolute;
-	  top: 50%;
+	  /*top: 50%;
 	  left: 50%;
 	  margin-top: -18px;
-	  margin-left: -23px;
+	  margin-left: -23px;*/
 	}
 	.vslider {
 	  position: relative;
