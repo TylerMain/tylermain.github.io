@@ -1111,6 +1111,12 @@ input, select, textarea {
 	 #wheel {
 	   height: 20px;
 	   margin-top: 5px;
+	   border-bottom: 5px solid grey;
+	 }
+
+	 #wheel:hover {
+	   height: 20px;
+	   margin-top: 5px;
 	   border-bottom: 5px solid white;
 	 }
 
@@ -1123,7 +1129,7 @@ input, select, textarea {
 
 	 #volumeBar {
 	   height: 5px;
-	   background-color: #00FF00;
+	   background-color: cyan;
 	   display: inline-block;
 	 }
 
