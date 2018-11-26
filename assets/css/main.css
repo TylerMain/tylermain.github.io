@@ -1128,11 +1128,11 @@ input, select, textarea {
 	@media screen and (max-width: 480px) {
 
 		.dropdown-content{
-			margin-top: 41px;
+			margin-top: 37.5px;
 		}
 
 		.navbar a,b,c,d {
-			font-size: 16px;
+			font-size: 14px;
 		}
 
 		.navbar d {
@@ -1140,7 +1140,7 @@ input, select, textarea {
 		}
 
 		.navbar d1,d2{
-			font-size: 16px;
+			font-size: 14px;
 		}
 	}
 
