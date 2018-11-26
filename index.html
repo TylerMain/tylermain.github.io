@@ -44,13 +44,9 @@
 					  </div>
 					  <c onclick="toggleAudio()" type="button">♫</c>
 					  <d onclick="toggleThumbnails()" type="button" id=mobileButton> Show Comments</d>
-					  Volume:
-					  <div id="volumeBarHolder">
-					    <div id="volumeBar"></div>
-					  </div>
-					  <div>
-					    <img id="wheel" src="https://openclipart.org/image/2400px/svg_to_png/262374/Wagonwheel.png" />
-					  </div>
+					  <div id="player">
+        				<div id="volume"></div>
+    				  </div>
 					</div>
 
 				<!-- Header -->
@@ -220,36 +216,21 @@
 					}
 				}
 			</script>
-			<script>
-				var volumeTickWidth = 0.03;
-				var maxRotation = 7200;
-				var minRotation = 0;
-				var volume = [];
-				var wheelDrag = {};
-				$(function() {
-				  volume = $("#volumeBar");
-
-				  $("#volumeBarHolder").width(maxRotation * volumeTickWidth + "px");
-
-				  wheelDrag = Draggable.create($("#wheel"), {
-				    type: "rotation",
-				    bounds: { minRotation: minRotation, maxRotation: maxRotation }
-				  })[0];
-				  wheelDrag.addEventListener("drag", onWheelDrag);
-				});
-
-				function onWheelDrag() {
-				  setVolumeWidth();
-				  if(wheelDrag.rotation == maxRotation){
-				     alert("You kids and your rock music. Turn it down!");
-				     }
-				}
-
-				function setVolumeWidth() {
-				  var width = Math.round(wheelDrag.rotation * volumeTickWidth);
-				  volume.width(width + "px");
-				}
-			</script>
+		<script>
+			var sound1 = document.createElement('sound1');
+			$(document).ready(function() {
+			    $("#volume").slider({
+			        range: "min",
+			        misn: 0,
+			        max: 100,
+			        value: 80,
+			        animate: true,
+			        slide: function(event, ui) {
+			            sound1.volume = (ui.value) / 100);
+			        }
+			    });
+			});
+		</script>
 		<!--script id="dsq-count-scr" src="//tylermain-github-io.disqus.com/count.js" async></script-->
 	</body>
 </html>
