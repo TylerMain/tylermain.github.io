@@ -224,7 +224,7 @@
 				}
 			</script>
 		<script>
-			var volumeTickWidth = 0.03;
+			var volumeTickWidth = 5;
 			var maxRotation = 7200;
 			var minRotation = 0;
 			var volume = [];
@@ -239,13 +239,15 @@
 			    bounds: { minRotation: minRotation, maxRotation: maxRotation }
 			  })[0];
 			  wheelDrag.addEventListener("drag", onWheelDrag);
+			  var sound = document.getElementById('sound1');
+			  sound.volume = volume;
 			});
 
 			function onWheelDrag() {
 			  setVolumeWidth();
-			  if(wheelDrag.rotation == maxRotation){
+			  /*if(wheelDrag.rotation == maxRotation){
 			     alert("You kids and your rock music. Turn it down!");
-			     }
+			     }*/
 			}
 
 			function setVolumeWidth() {
