@@ -43,7 +43,7 @@
 					    </div>
 					  </div>
 					  <c onclick="toggleAudio()" type="button">♫</c>
-					  <d onclick="cycleButtons()" type="button"><i class="fa fa-caret-right"></i></d>
+					  <d onclick="toggleThumbnails()" type="button" id=mobileButton> Toggle Comments <i class="fa fa-caret-right"></i></d>
 					</div>
 
 				<!-- Header -->
@@ -64,7 +64,7 @@
 							<a class="thumbnail" href="images/fulls/01.jpg" data-position="left center"><img src="images/thumbs/01.jpg" alt="" /></a>
 							<h2>Diam tempus accumsan</h2>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-							<button onclick="toggleThumbnails()" type="button">Comments</button>
+							<button onclick="toggleThumbnails()" type="button" id=button1> Show Comments</button>
 						</article>
 						<article>
 							<a class="thumbnail" href="images/fulls/02.jpg"><img src="images/thumbs/02.jpg" alt="" /></a>
@@ -180,21 +180,18 @@
 				}
 			</script>
 			<script>
-				var isShowing = true;
+				var isShowing;
 				function toggleThumbnails(){
-					if(isShowing){
+					if(document.getElementById("thumbnails").style.display == "flex"){
 						document.getElementById("thumbnails").style.display = "none";
 						document.getElementById("disqus_thread").style.display = "flex";
-						isShowing=false;
 					}
 					else{
 						document.getElementById("thumbnails").style.display = "flex";
 						document.getElementById("disqus_thread").style.display = "none";
-						isShowing=true;
 					}
 				}
 			</script>
-
 		<!--script id="dsq-count-scr" src="//tylermain-github-io.disqus.com/count.js" async></script-->
 	</body>
 </html>
