@@ -223,7 +223,7 @@
 				}
 			</script>
 		<script>
-			var volumeTickWidth = 0.03;
+			var volumeTickWidth = 1;
 			var maxRotation = 7200;
 			var minRotation = 0;
 			var volume = [];
@@ -238,8 +238,6 @@
 			    bounds: { minRotation: minRotation, maxRotation: maxRotation }
 			  })[0];
 			  wheelDrag.addEventListener("drag", onWheelDrag);
-			  var sound = document.getElementById('sound1');
-			  sound.volume = volume;
 			});
 
 			function onWheelDrag() {
@@ -252,6 +250,9 @@
 			function setVolumeWidth() {
 			  var width = Math.round(wheelDrag.rotation * volumeTickWidth);
 			  volume.width(width + "px");
+
+			  var sound = document.getElementById('sound1');
+			  sound.volume = width;
 			}
 		</script>
 		<!--script id="dsq-count-scr" src="//tylermain-github-io.disqus.com/count.js" async></script-->
