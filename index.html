@@ -10,10 +10,11 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<script type="text/javascript" src="assets/js/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/utils/Draggable.min.js"></script>
+		<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
-	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.0/jquery-ui.min.js"></script>
 	<body class="is-preload-0 is-preload-1 is-preload-2">
 		<audio id="sound1">
 		<source src="sounds/Ringworm by Tartanic.mp3" type="audio/mpeg">
@@ -46,8 +47,12 @@
 					  </div>
 					  <c onclick="toggleAudio()" type="button">♫</c>
 					  <d onclick="toggleThumbnails()" type="button" id=mobileButton> Show Comments</d>
-					  <div class="container">
-						<input type="range" value="0.6" data-steps="8" id="sliderInput" />
+					  Volume:
+					  <div id="volumeBarHolder">
+					    <div id="volumeBar"></div>
+					  </div>
+					  <div>
+					    <img id="wheel" src="images\volumeWheel.png" />
 					  </div>
 					</div>
 
@@ -219,58 +224,34 @@
 				}
 			</script>
 		<script>
-			$(document).ready(function() {  
-			  var $input = $('#sliderInput'),
-			      steps = $input.attr('data-steps');
-			      defValue = $input.attr('value'),
-			      $slider = $("<div class='vslider'><div class='vslider_bar'></div><ul class='vslider_sticks'></div>").appendTo($input.parent());
-			      $input.hide();
-			  
-			  for (var i = 0; i < steps; i++) {
-			    var $stick = $('<li><div class="vslider_stick"a></div></li>').appendTo($slider.find('.vslider_sticks'));
-			    $stick.on('mouseenter', function(){
-			      $(this).addClass('active');
-			    }).on('mouseleave', function(){
-			      $(this).removeClass('active');
-			    });
-			  }  
-			  
-			  var startDrag = function (event) {
-			    renderUI(getPercent(event));
-			    $(document.body).on('mousemove', onDrag);
-			    $(document.body).on('mouseup', stopDrag);
-			  },
-			  stopDrag = function (event) {
-			    $(document.body).off('mouseup', stopDrag);
-			    $(document.body).off('mousemove', onDrag);
-			  },
-			  onDrag = function (event) {
-			    renderUI(getPercent(event));
-			  };
-			  
-			  renderUI = function(percent) {
-			    var index = Math.round(percent * steps);
-			    index = index < steps ? index : steps;
-			    
-			    $('.vslider_sticks > li').find('div').css('opacity', 0);
+			var volumeTickWidth = 0.03;
+			var maxRotation = 7200;
+			var minRotation = 0;
+			var volume = [];
+			var wheelDrag = {};
+			$(function() {
+			  volume = $("#volumeBar");
 
-			    for(var i = 0; i < index; i++) {
-			      $('.vslider_sticks > li:eq(' + i + ')').find('div').css('opacity', 1);
-			    }
-			  };
-			  renderUI(defValue);
-			  
-			  getPercent = function(event) {
-			    var percent = (event.pageX - $slider.offset().left) / $('.vslider_sticks').width();
-			    percent = percent >= 0 ? percent : 0;
-			    percent = percent <= 1 ? percent : 1;
-			    var sound = document.getElementById("sound1");
-			    sound.volume = percent;
-			    return percent;
-			  };
-			  
-			  $slider.on('mousedown', startDrag);
+			  $("#volumeBarHolder").width(maxRotation * volumeTickWidth + "px");
+
+			  wheelDrag = Draggable.create($("#wheel"), {
+			    type: "rotation",
+			    bounds: { minRotation: minRotation, maxRotation: maxRotation }
+			  })[0];
+			  wheelDrag.addEventListener("drag", onWheelDrag);
 			});
+
+			function onWheelDrag() {
+			  setVolumeWidth();
+			  if(wheelDrag.rotation == maxRotation){
+			     alert("You kids and your rock music. Turn it down!");
+			     }
+			}
+
+			function setVolumeWidth() {
+			  var width = Math.round(wheelDrag.rotation * volumeTickWidth);
+			  volume.width(width + "px");
+			}
 		</script>
 		<!--script id="dsq-count-scr" src="//tylermain-github-io.disqus.com/count.js" async></script-->
 	</body>
