@@ -48,11 +48,11 @@
 					  <c onclick="toggleAudio()" type="button">♫</c>
 					  <d onclick="toggleThumbnails()" type="button" id=mobileButton> Show Comments</d>
 					  <div>
-					    <img id="wheel" src="images\volumeWheel.png" />
+					    <img id="wheel" style="color:#fff" src="images\volumeWheel.png" />
 					  </div>
-					  <div id="volumeBarHolder">
+					  <!--div id="volumeBarHolder">
 					    <div id="volumeBar"></div>
-					  </div>
+					  </div-->
 					</div>
 
 				<!-- Header -->
@@ -251,7 +251,7 @@
 			  var width = Math.round(wheelDrag.rotation * volumeTickWidth);
 			  volume.width(width + "px");
 
-			  var loudness = Math.round(width / 7200);
+			  var loudness = Math.round(wheelDrag.rotation / 7200);
 			  var sound = document.getElementById('sound1');
 			  sound.volume = loudness;
 			}

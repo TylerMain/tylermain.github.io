@@ -1110,13 +1110,14 @@ input, select, textarea {
 
 	 #wheel {
 	   height: 20px;
-	   margin-top: 5px;
+	   padding: 5px;
 	   border-bottom: 5px solid grey;
 	 }
 
 	 #wheel:hover {
 	   height: 20px;
-	   margin-top: 5px;
+	   padding: 5px;
+	   background-color: grey;
 	   border-bottom: 5px solid white;
 	 }
 
