@@ -1128,7 +1128,7 @@ input, select, textarea {
 	 }
 
 	 #volumeBar {
-	   height: 5px;
+	   height: 15px;
 	   background-color: cyan;
 	   display: inline-block;
 	 }
