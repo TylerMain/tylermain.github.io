@@ -968,7 +968,7 @@ input, select, textarea {
 	    max-width: 100%;
 	}
 
-	.navbar a {							/* Home button */
+	.navbar a {							/* Home/ About button */
 	    float: left;
 	    color: white;
 	    padding: 5px;
@@ -976,9 +976,10 @@ input, select, textarea {
 	    text-decoration: none;
 	    border-bottom: 5px solid grey;
 	    display: flex;
+	    cursor: pointer;
 	}
 
-	.navbar b {							/* About button */
+	.navbar b {							/*  */
 	    float: left;
 	    color: white;
 	    padding: 5px;
@@ -986,6 +987,7 @@ input, select, textarea {
 	    text-decoration: none;
 	    border-bottom: 5px solid grey;
 	    display: flex;
+	    cursor: pointer;
 	}
 
 	.navbar c {							/* Music button */
@@ -996,6 +998,7 @@ input, select, textarea {
 	    text-decoration: none;
 	    border-bottom: 5px solid grey;
 	    display: flex;
+	    cursor: pointer;
 	}
 
 	.navbar d {							/* Arrow button */
@@ -1006,6 +1009,7 @@ input, select, textarea {
 	    text-decoration: none;
 	    border-bottom: 5px solid grey;
 	    display: none;
+	    cursor: pointer;
 	}
 
 	.dropdown {
@@ -1046,6 +1050,7 @@ input, select, textarea {
 	    border-bottom: 5px solid grey;
 	    border-radius: 0px;
 	    margin-bottom: 10px;
+	    cursor: pointer;
 	}
 
 	.navbar d2 {				/* Catergory dropdown button */
@@ -1058,6 +1063,7 @@ input, select, textarea {
 	    border-bottom: 5px solid grey;
 	    border-radius: 0px;
 	    margin-bottom: 10px;
+	    cursor: pointer;
 	}
 
 	.navbar d1:hover {
@@ -1086,6 +1092,7 @@ input, select, textarea {
 	    text-decoration: none;
 	    display: block;
 	    text-align: center;
+	    cursor: pointer;
 	}
 
 	.dropdown-content a:hover {
@@ -1124,8 +1131,16 @@ input, select, textarea {
 			margin-top: 39px;
 		}
 
-		.navbar d{
+		.navbar a,b,c,d {
+			font-size: 12px;
+		}
+
+		.navbar d {
 			display: flex;
+		}
+
+		.navbar d1,d2{
+			font-size: 12px;
 		}
 	}
 
