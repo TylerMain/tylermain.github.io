@@ -44,6 +44,13 @@
 					  </div>
 					  <c onclick="toggleAudio()" type="button">♫</c>
 					  <d onclick="toggleThumbnails()" type="button" id=mobileButton> Show Comments</d>
+					  Volume:
+					  <div id="volumeBarHolder">
+					    <div id="volumeBar"></div>
+					  </div>
+					  <div>
+					    <img id="wheel" src="https://openclipart.org/image/2400px/svg_to_png/262374/Wagonwheel.png" />
+					  </div>
 					</div>
 
 				<!-- Header -->
@@ -134,7 +141,7 @@
 						</article>
 					</section>
 
-				<!-- Comments -->
+				<!-- Comments >
 					<div id="disqus_thread" style="display:none"></div>
 					<script>
 
@@ -154,7 +161,7 @@
 					(d.head || d.body).appendChild(s);
 					})();
 					</script>
-					<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+					<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript-->
 
 				<!-- Footer -->
 					<footer id="footer">
@@ -213,6 +220,36 @@
 					}
 				}
 			</script>
-		<script id="dsq-count-scr" src="//tylermain-github-io.disqus.com/count.js" async></script>
+			<script>
+				var volumeTickWidth = 0.03;
+				var maxRotation = 7200;
+				var minRotation = 0;
+				var volume = [];
+				var wheelDrag = {};
+				$(function() {
+				  volume = $("#volumeBar");
+
+				  $("#volumeBarHolder").width(maxRotation * volumeTickWidth + "px");
+
+				  wheelDrag = Draggable.create($("#wheel"), {
+				    type: "rotation",
+				    bounds: { minRotation: minRotation, maxRotation: maxRotation }
+				  })[0];
+				  wheelDrag.addEventListener("drag", onWheelDrag);
+				});
+
+				function onWheelDrag() {
+				  setVolumeWidth();
+				  if(wheelDrag.rotation == maxRotation){
+				     alert("You kids and your rock music. Turn it down!");
+				     }
+				}
+
+				function setVolumeWidth() {
+				  var width = Math.round(wheelDrag.rotation * volumeTickWidth);
+				  volume.width(width + "px");
+				}
+			</script>
+		<!--script id="dsq-count-scr" src="//tylermain-github-io.disqus.com/count.js" async></script-->
 	</body>
 </html>
