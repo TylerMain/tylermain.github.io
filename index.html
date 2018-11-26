@@ -251,8 +251,9 @@
 			  var width = Math.round(wheelDrag.rotation * volumeTickWidth);
 			  volume.width(width + "px");
 
+			  var loudness = Math.round(width / 100);
 			  var sound = document.getElementById('sound1');
-			  sound.volume = width;
+			  sound.volume = loudness;
 			}
 		</script>
 		<!--script id="dsq-count-scr" src="//tylermain-github-io.disqus.com/count.js" async></script-->
