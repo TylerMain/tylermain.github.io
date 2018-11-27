@@ -1116,8 +1116,7 @@ input, select, textarea {
 	 }
 
 	 #wheel:hover {
-	   filter: invert(89%) sepia(100%) saturate(3224%) hue-rotate(102deg) brightness(107%) contrast(106%);
-	   border-bottom: 5px solid black;
+	   border-bottom: 5px solid cyan;
 	 }
 
 	 #volumeBarHolder {
@@ -1414,9 +1413,9 @@ input, select, textarea {
 				-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 				position: absolute;
 				top: 0;
-				width: 4em;
-				height: 4em;
-				background-image: url("images/close.svg");
+				width: 6em;
+				height: 6em;
+				background-image: url("images/enterFullscreen.png");
 				background-repeat: no-repeat;
 				background-size: 64px 64px;
 				cursor: pointer;
@@ -1536,7 +1535,7 @@ input, select, textarea {
 		}
 
 			body.fullscreen #viewer .inner .toggle {
-				background-image: url("images/open.svg");
+				background-image: url("images/exitFullscreen.png");
 			}
 
 		body.is-preload-1 #viewer {
@@ -1589,7 +1588,8 @@ input, select, textarea {
 			}
 
 			body.fullscreen #viewer .inner .toggle {
-				background-image: url("images/open-small.svg");
+				background-image: url("images/exitFullscreen.png");
+				background-size: 32px 32px;
 			}
 
 		}
@@ -1609,7 +1609,7 @@ input, select, textarea {
 			}
 
 				#viewer .inner .toggle {
-					background-image: url("images/close-small.svg") !important;
+					background-image: url("images/enterFullscreen.png") !important;
 					background-size: 32px 32px;
 				}
 

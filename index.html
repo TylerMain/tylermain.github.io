@@ -47,7 +47,7 @@
 					  </div>
 					  <c onclick="toggleAudio()" type="button">♫</c>
 					  <div>
-					    <img id="wheel" src="images\volumeWheel.png" />
+					    <img id="wheel" src="images\volumeWheel\5.png" />
 					  </div>
 					  <d onclick="toggleThumbnails()" type="button" id=mobileButton> Show Comments</d>
 					  <!--div id="volumeBarHolder">
@@ -254,6 +254,40 @@
 			  var loudness = width / 3600;
 			  var sound = document.getElementById('sound1');
 			  sound.volume = loudness;
+
+			  if (loudness == 1){
+			  	document.getElementById('wheel').src="images/volumeWheel/10.png";
+			  }
+			  else if (loudness >= 0.9){
+			  	document.getElementById('wheel').src="images/volumeWheel/9.png";
+			  }
+			  else if (loudness >= 0.8){
+			  	document.getElementById('wheel').src="images/volumeWheel/8.png";
+			  }
+			  else if (loudness >= 0.7){
+			  	document.getElementById('wheel').src="images/volumeWheel/7.png";
+			  }
+			  else if (loudness >= 0.6){
+			  	document.getElementById('wheel').src="images/volumeWheel/6.png";
+			  }
+			  else if (loudness >= 0.5){
+			  	document.getElementById('wheel').src="images/volumeWheel/5.png";
+			  }
+			  else if (loudness >= 0.4){
+			  	document.getElementById('wheel').src="images/volumeWheel/4.png";
+			  }
+			  else if (loudness >= 0.2){
+			  	document.getElementById('wheel').src="images/volumeWheel/2.png";
+			  }
+			  else if (loudness >= 0.2){
+			  	document.getElementById('wheel').src="images/volumeWheel/2.png";
+			  }
+			  else if (loudness >= 0.1){
+			  	document.getElementById('wheel').src="images/volumeWheel/1.png";
+			  }
+			  else{
+			  	document.getElementById('wheel').src="images/volumeWheel/volumeWheel.png";
+			  }
 			}
 		</script>
 		<!--script id="dsq-count-scr" src="//tylermain-github-io.disqus.com/count.js" async></script-->
