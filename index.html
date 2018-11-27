@@ -51,7 +51,7 @@
 					    <img id="wheel" style="color:#fff" src="images\volumeWheel.png" />
 					  </div>
 					  <div id="volumeBarHolder">
-					    <div id="volumeBar" value="3600"></div>
+					    <div id="volumeBar"></div>
 					  </div>
 					</div>
 
@@ -226,7 +226,7 @@
 			var volumeTickWidth = .03;
 			var maxRotation = 7200;
 			var minRotation = 0;
-			var volume = [];
+			var volume = [3600];
 			var wheelDrag = {};
 			$(function() {
 			  volume = $("#volumeBar");
