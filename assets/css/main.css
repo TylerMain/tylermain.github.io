@@ -918,10 +918,10 @@ input, select, textarea {
 /* About Page */
 
 	#about {
-		-moz-transition: opacity 0.75s ease, right 0.75s ease, left 0.75s ease, visibility 0.75s;
+		/*-moz-transition: opacity 0.75s ease, right 0.75s ease, left 0.75s ease, visibility 0.75s;
 		-webkit-transition: opacity 0.75s ease, right 0.75s ease, left 0.75s ease, visibility 0.75s;
 		-ms-transition: opacity 0.75s ease, right 0.75s ease, left 0.75s ease, visibility 0.75s;
-		transition: opacity 0.75s ease, right 0.75s ease, left 0.75s ease, visibility 0.75s;
+		transition: opacity 0.75s ease, right 0.75s ease, left 0.75s ease, visibility 0.75s;*/
 		-webkit-overflow-scrolling: touch;
 		top: 0;
 		height: 100%;
