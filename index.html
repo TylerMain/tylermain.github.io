@@ -226,7 +226,7 @@
 			var volumeTickWidth = .03;
 			var maxRotation = 7200;
 			var minRotation = 0;
-			var volume = [3600];
+			var volume = [];
 			var wheelDrag = {};
 			$(function() {
 			  volume = $("#volumeBar");
@@ -236,7 +236,7 @@
 			  wheelDrag = Draggable.create($("#wheel"), {
 			    type: "rotation",
 			    bounds: { minRotation: minRotation, maxRotation: maxRotation }
-			  })[0];
+			  })[3600];
 			  wheelDrag.addEventListener("drag", onWheelDrag);
 			});
 
