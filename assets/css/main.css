@@ -1437,7 +1437,7 @@ input, select, textarea {
 				width: 6em;
 				height: 6em;
 				margin-top: -3em;
-				background-image: url("images/arrow.svg");
+				background-image: url("images/nextArrow.png");
 				background-position: center;
 				background-repeat: no-repeat;
 				background-size: contain;
@@ -1593,7 +1593,7 @@ input, select, textarea {
 
 			#viewer .inner .nav-next,
 			#viewer .inner .nav-previous {
-				background-image: url("images/arrow-small.svg");
+				background-image: url("images/nextArrow.png");
 				background-size: 32px 32px; 
 			}
 

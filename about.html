@@ -5,6 +5,9 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<script type="text/javascript" src="assets/js/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/utils/Draggable.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body>
@@ -36,6 +39,9 @@
 					    </div>
 					  </div>
 					  <c onclick="toggleAudio()" type="button">♫</c>
+					  <div>
+					    <img id="wheel" src="images\volumeWheel\5.png" />
+					  </div>
 					</div>
 
 				<!-- Header -->
@@ -76,8 +82,13 @@
 			</div>
 
 		<!-- Scripts -->
-			<script>
-				var x = document.getElementById("sound1"); 
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script> /* Button to play music */
+				var x = document.getElementById("sound1");
+				x.volume = 0.5; 
 				var isPlaying = false;
 				function playAudio() { 
 				    x.play(); 
@@ -96,6 +107,74 @@
 					}
 				}
 			</script>
+		<script>
+			var volumeTickWidth = 1;
+			var maxRotation = 1800;
+			var minRotation = -1800;
+			var volume = [];
+			var wheelDrag = {};
+			$(function() {
+			  volume = $("#volumeBar");
+
+			  $("#volumeBarHolder").width(maxRotation * volumeTickWidth + "px");
+
+			  wheelDrag = Draggable.create($("#wheel"), {
+			    type: "rotation",
+			    bounds: { minRotation: minRotation, maxRotation: maxRotation }
+			  })[0];
+			  wheelDrag.addEventListener("drag", onWheelDrag);
+			});
+
+			function onWheelDrag() {
+			  setVolumeWidth();
+			  /*if(wheelDrag.rotation == maxRotation){
+			     alert("You kids and your rock music. Turn it down!");
+			     }*/
+			}
+
+			function setVolumeWidth() {
+			  var width = Math.round((wheelDrag.rotation + 1800) * volumeTickWidth);
+			  volume.width(width + "px");
+
+			  var loudness = width / 3600;
+			  var sound = document.getElementById('sound1');
+			  sound.volume = loudness;
+
+			  if (loudness == 1){
+			  	document.getElementById('wheel').src="images/volumeWheel/10.png";
+			  }
+			  else if (loudness >= 0.9){
+			  	document.getElementById('wheel').src="images/volumeWheel/9.png";
+			  }
+			  else if (loudness >= 0.8){
+			  	document.getElementById('wheel').src="images/volumeWheel/8.png";
+			  }
+			  else if (loudness >= 0.7){
+			  	document.getElementById('wheel').src="images/volumeWheel/7.png";
+			  }
+			  else if (loudness >= 0.6){
+			  	document.getElementById('wheel').src="images/volumeWheel/6.png";
+			  }
+			  else if (loudness >= 0.5){
+			  	document.getElementById('wheel').src="images/volumeWheel/5.png";
+			  }
+			  else if (loudness >= 0.4){
+			  	document.getElementById('wheel').src="images/volumeWheel/4.png";
+			  }
+			  else if (loudness >= 0.2){
+			  	document.getElementById('wheel').src="images/volumeWheel/2.png";
+			  }
+			  else if (loudness >= 0.2){
+			  	document.getElementById('wheel').src="images/volumeWheel/2.png";
+			  }
+			  else if (loudness >= 0.1){
+			  	document.getElementById('wheel').src="images/volumeWheel/1.png";
+			  }
+			  else{
+			  	document.getElementById('wheel').src="images/volumeWheel/volumeWheel.png";
+			  }
+			}
+		</script>
 
 		<script id="dsq-count-scr" src="//tylermain-github-io.disqus.com/count.js" async></script>
 	</body>
