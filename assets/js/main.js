@@ -512,9 +512,9 @@ var main = (function($) { var _ = {
 		// Lock.
 			_.locked = true;
 
-		// Hide main wrapper if medium is active.
+		// Hide main wrapper if less than 480p is active. Was medium, but I changed to xsmall.
 			if (!noHide
-			&&	breakpoints.active('<=medium'))
+			&&	breakpoints.active('<=xsmall'))
 				_.hide();
 
 		// Get slides.

@@ -881,7 +881,7 @@ input, select, textarea {
 
 				#main .toggle {
 					background-position: 0.5em 0.5em;
-					display: block;
+					display: none;
 				}
 
 		}
@@ -1021,23 +1021,23 @@ input, select, textarea {
 	}
 
 	.navbar a:hover{
-	    background-color: grey;
-	    border-bottom: 5px solid white;
+		color: cyan;
+	    border-bottom: 5px solid cyan;
 	}
 
 	.navbar b:hover{
-	    background-color: grey;
-	    border-bottom: 5px solid white;
+	    color: cyan;
+	    border-bottom: 5px solid cyan;
 	}
 
 	.navbar c:hover{
-	    background-color: grey;
-	    border-bottom: 5px solid white;
+	    color: cyan;
+	    border-bottom: 5px solid cyan;
 	}
 
 	.navbar d:hover{
-	    background-color: grey;
-	    border-bottom: 5px solid white;
+	    color: cyan;
+	    border-bottom: 5px solid cyan;
 	}
 
 	.navbar d1 { 				/* Years dropdown button */
@@ -1067,13 +1067,13 @@ input, select, textarea {
 	}
 
 	.navbar d1:hover {
-		background-color: grey;
-		border-bottom: 5px solid white;
+		color: cyan;
+		border-bottom: 5px solid cyan;
 	}
 
 	.navbar d2:hover {
-		background-color: grey;
-		border-bottom: 5px solid white;
+		color: cyan;
+		border-bottom: 5px solid cyan;
 	}
 
 	.dropdown-content {
@@ -1096,8 +1096,8 @@ input, select, textarea {
 	}
 
 	.dropdown-content a:hover {
-	    background-color: grey;
-	    border-bottom: 5px solid white;
+		color: cyan;
+	    border-bottom: 5px solid cyan;
 	}
 
 	.dropdown:hover .dropdown-content {
@@ -1110,14 +1110,14 @@ input, select, textarea {
 
 	 #wheel {
 	   height: 50px;
-	   padding: 5px;
+	   padding: 4px;
 	   float: left;
 	   border-bottom: 5px solid grey;
 	 }
 
 	 #wheel:hover {
-	   background-color: grey;
-	   border-bottom: 5px solid white;
+	   filter: invert(89%) sepia(100%) saturate(3224%) hue-rotate(102deg) brightness(107%) contrast(106%);
+	   border-bottom: 5px solid black;
 	 }
 
 	 #volumeBarHolder {
@@ -1138,12 +1138,22 @@ input, select, textarea {
 		.dropdown-content{
 			margin-top: 41px;
 		}
+
+		#wheel{
+			height: 41px;
+		}
 	}
 
 	@media screen and (max-width: 1280px) {
 
 		.dropdown-content{
 			margin-top: 39px;
+		}
+
+		#wheel{
+			height: 39px;
+			width: 26px;
+			margin-top: 0px;
 		}
 	}
 
@@ -1170,6 +1180,12 @@ input, select, textarea {
 
 		.navbar d1,d2{
 			font-size: 14px;
+		}
+
+		#wheel{
+			height: 38px;
+			width: 38px;
+			margin-top: 0px;
 		}
 	}
 
@@ -1406,7 +1422,7 @@ input, select, textarea {
 				cursor: pointer;
 				z-index: 1;
 				right: 0;
-				background-position: calc(100% - 0.75em) 0.75em; /* calc(100% - 0.75em) 0.75em;*/
+				background-position: calc(100% - 0.75em) 0.75em;
 			}
 
 			#viewer .inner .nav-next,
