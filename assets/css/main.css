@@ -1113,6 +1113,7 @@ input, select, textarea {
 	   padding: 4px;
 	   float: left;
 	   border-bottom: 5px solid grey;
+	   cursor: pointer;
 	 }
 
 	 #wheel:hover {
@@ -1424,6 +1425,10 @@ input, select, textarea {
 				background-position: calc(100% - 0.75em) 0.75em;
 			}
 
+			#viewer .inner .toggle:hover {
+				filter: brightness(0) saturate(100%) invert(91%) sepia(60%) saturate(6602%) hue-rotate(101deg) brightness(99%) contrast(104%);
+			}
+
 			#viewer .inner .nav-next,
 			#viewer .inner .nav-previous {
 				-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -1437,6 +1442,11 @@ input, select, textarea {
 				background-repeat: no-repeat;
 				background-size: contain;
 				cursor: pointer;
+			}
+
+			#viewer .inner .nav-next:hover,
+			#viewer .inner .nav-previous:hover {
+				filter: brightness(0) saturate(100%) invert(91%) sepia(60%) saturate(6602%) hue-rotate(101deg) brightness(99%) contrast(104%);
 			}
 
 			#viewer .inner .nav-previous {
