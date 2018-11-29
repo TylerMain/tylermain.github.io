@@ -32,17 +32,20 @@
 					  <div class="dropdown">
 					    <d1>Year <i class="fa fa-caret-down"></i></d1>
 					    <div class="dropdown-content">
-					      <a href="#">2019</a>
-					      <a href="#">2018</a>
-					      <a href="#">2017</a>
+					      <a onclick="filterSelection('all')">All</a>
+					      <a onclick="filterSelection('2019')">2019</a>
+					      <a onclick="filterSelection('2018')">2018</a>
+					      <a onclick="filterSelection('2017')">2017</a>
 					    </div>
 					  </div>
 					  <div class="dropdown">
 					    <d2>Category <i class="fa fa-caret-down"></i></d2>
 					    <div class="dropdown-content">
-					      <a href="#">Flags</a>
-					      <a href="#">Portraits</a>
-					      <a href="#">Other</a>
+					      <a onclick="filterSelection('all')">All</a>
+					      <a onclick="filterSelection('flag')">Flags</a>
+					      <a onclick="filterSelection('portrait')">Portraits</a>
+					      <a onclick="filterSelection('landscape')">Landscapes</a>
+					      <a onclick="filterSelection('other')">Other</a>
 					    </div>
 					  </div>
 					  <c onclick="toggleAudio()" type="button">♫</c>
@@ -58,7 +61,7 @@
 				<!-- Header -->
 					<header id="header">
 						<!--h1>Lens</h1-->
-						<p>I made this =)</p>
+						<p id="debug">I made this =)</p>
 						<!--ul class="icons">
 							<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
 							<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
@@ -69,81 +72,81 @@
 
 				<!-- Thumbnail -->
 					<section id="thumbnails">
-						<article>
-							<a class="thumbnail" href="images/fulls/01.jpg" data-position="left center"><img src="images/thumbs/01.jpg" alt="" /></a>
+						<article class="article flag 2019">
+							<a class="thumbnail" href="images/fulls/01.jpg" data-position="left center"><img src="images/thumbs/01.png" alt="" /></a>
 							<h2>Diam tempus accumsan</h2>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 							<button onclick="toggleThumbnails()" type="button" id=button1>Comments</button>
 						</article>
-						<article>
-							<a class="thumbnail" href="images/fulls/02.jpg"><img src="images/thumbs/02.jpg" alt="" /></a>
+						<article class="article portrait 2018">
+							<a class="thumbnail" href="images/fulls/02.jpg"><img src="images/thumbs/02.png" alt="" /></a>
 							<h2>Vivamus convallis libero</h2>
 							<p>Sed velit lacus, laoreet at venenatis convallis in lorem tincidunt.</p>
 							<button onclick="toggleThumbnails()" type="button" id=button1>Comments</button>
 						</article>
-						<article>
-							<a class="thumbnail" href="images/fulls/03.jpg" data-position="top center"><img src="images/thumbs/03.jpg" alt="" /></a>
+						<article class="article landscape 2017">
+							<a class="thumbnail" href="images/fulls/03.jpg" data-position="top center"><img src="images/thumbs/03.png" alt="" /></a>
 							<h2>Nec accumsan enim felis</h2>
 							<p>Maecenas eleifend tellus ut turpis eleifend, vitae pretium faucibus.</p>
 							<button onclick="toggleThumbnails()" type="button" id=button1>Comments</button>
 						</article>
-						<article>
-							<a class="thumbnail" href="images/fulls/04.jpg"><img src="images/thumbs/04.jpg" alt="" /></a>
+						<article class="article other 2019">
+							<a class="thumbnail" href="images/fulls/04.jpg"><img src="images/thumbs/04.png" alt="" /></a>
 							<h2>Donec maximus nisi eget</h2>
 							<p>Tristique in nulla vel congue. Sed sociis natoque parturient nascetur.</p>
 							<button onclick="toggleThumbnails()" type="button" id=button1>Comments</button>
 						</article>
-						<article>
-							<a class="thumbnail" href="images/fulls/05.jpg" data-position="top center"><img src="images/thumbs/05.jpg" alt="" /></a>
+						<article class="article flag 2018">
+							<a class="thumbnail" href="images/fulls/05.jpg" data-position="top center"><img src="images/thumbs/05.png" alt="" /></a>
 							<h2>Nullam vitae nunc vulputate</h2>
 							<p>In pellentesque cursus velit id posuere. Donec vehicula nulla.</p>
 							<button onclick="toggleThumbnails()" type="button" id=button1>Comments</button>
 						</article>
-						<article>
-							<a class="thumbnail" href="images/fulls/06.jpg"><img src="images/thumbs/06.jpg" alt="" /></a>
+						<article class="article portrait 2017">
+							<a class="thumbnail" href="images/fulls/06.jpg"><img src="images/thumbs/06.png" alt="" /></a>
 							<h2>Phasellus magna faucibus</h2>
 							<p>Nulla dignissim libero maximus tellus varius dictum ut posuere magna.</p>
 							<button onclick="toggleThumbnails()" type="button" id=button1>Comments</button>
 						</article>
-						<article>
-							<a class="thumbnail" href="images/fulls/07.jpg"><img src="images/thumbs/07.jpg" alt="" /></a>
+						<article class="article landscape 2019">
+							<a class="thumbnail" href="images/fulls/07.jpg"><img src="images/thumbs/07.png" alt="" /></a>
 							<h2>Proin quis mauris</h2>
 							<p>Etiam ultricies, lorem quis efficitur porttitor, facilisis ante orci urna.</p>
 							<button onclick="toggleThumbnails()" type="button" id=button1>Comments</button>
 						</article>
-						<article>
-							<a class="thumbnail" href="images/fulls/08.jpg"><img src="images/thumbs/08.jpg" alt="" /></a>
+						<article class="article other 2018">
+							<a class="thumbnail" href="images/fulls/08.jpg"><img src="images/thumbs/08.png" alt="" /></a>
 							<h2>Gravida quis varius enim</h2>
 							<p>Nunc egestas congue lorem. Nullam dictum placerat ex sapien tortor mattis.</p>
 							<button onclick="toggleThumbnails()" type="button" id=button1>Comments</button>
 						</article>
-						<article>
-							<a class="thumbnail" href="images/fulls/09.jpg"><img src="images/thumbs/09.jpg" alt="" /></a>
+						<article class="article flag 2017">
+							<a class="thumbnail" href="images/fulls/09.jpg"><img src="images/thumbs/09.png" alt="" /></a>
 							<h2>Morbi eget vitae adipiscing</h2>
 							<p>In quis vulputate dui. Maecenas metus elit, dictum praesent lacinia lacus.</p>
 							<button onclick="toggleThumbnails()" type="button" id=button1>Comments</button>
 						</article>
-						<article>
-							<a class="thumbnail" href="images/fulls/10.jpg"><img src="images/thumbs/10.jpg" alt="" /></a>
+						<article class="article portrait 2019">
+							<a class="thumbnail" href="images/fulls/10.jpg"><img src="images/thumbs/10.png" alt="" /></a>
 							<h2>Habitant tristique senectus</h2>
 							<p>Vestibulum ante ipsum primis in faucibus orci luctus ac tincidunt dolor.</p>
 							<button onclick="toggleThumbnails()" type="button" id=button1>Comments</button>
 						</article>
-						<article>
-							<a class="thumbnail" href="images/fulls/11.jpg"><img src="images/thumbs/11.jpg" alt="" /></a>
+						<article class="article landscape 2018">
+							<a class="thumbnail" href="images/fulls/11.jpg"><img src="images/thumbs/11.png" alt="" /></a>
 							<h2>Pharetra ex non faucibus</h2>
 							<p>Ut sed magna euismod leo laoreet congue. Fusce congue enim ultricies.</p>
 							<button onclick="toggleThumbnails()" type="button" id=button1>Comments</button>
 						</article>
-						<article>
-							<a class="thumbnail" href="images/fulls/12.jpg"><img src="images/thumbs/12.jpg" alt="" /></a>
+						<article class="article other 2017">
+							<a class="thumbnail" href="images/fulls/12.jpg"><img src="images/thumbs/12.png" alt="" /></a>
 							<h2>Mattis lorem sodales</h2>
 							<p>Feugiat auctor leo massa, nec vestibulum nisl erat faucibus, rutrum nulla.</p>
 							<button onclick="toggleThumbnails()" type="button" id=button1>Comments</button>
 						</article>
 					</section>
 
-				<!-- Comments -->
+				<!-- Comments >
 					<div id="disqus_thread" style="display:none"></div>
 					<script>
 
@@ -163,7 +166,7 @@
 					(d.head || d.body).appendChild(s);
 					})();
 					</script>
-					<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+					<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript-->
 
 				<!-- Footer -->
 					<footer id="footer">
@@ -290,6 +293,56 @@
 			  }
 			}
 		</script>
-		<script id="dsq-count-scr" src="//tylermain-github-io.disqus.com/count.js" async></script>
+		<script>
+			filterSelection("all")
+			function filterSelection(c) {
+			  var x, i;
+			  x = document.getElementsByClassName("article");
+			  if (c == 'all') {
+			    for (i = 0; i < x.length; i++) {
+			      w3RemoveClass(x[i], "show");
+			    }
+			  } else {
+			    for (i = 0; i < x.length; i++) {
+			      w3AddClass(x[i], "show");
+			      if (x[i].className.indexOf(c) > -1) w3RemoveClass(x[i], "show");
+			    }
+			  }
+			}
+
+			function w3AddClass(element, name) {
+			  var i, arr1, arr2;
+			  arr1 = element.className.split(" ");
+			  arr2 = name.split(" ");
+			  for (i = 0; i < arr2.length; i++) {
+			    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+			  }
+			}
+
+			function w3RemoveClass(element, name) {
+			  var i, arr1, arr2;
+			  arr1 = element.className.split(" ");
+			  arr2 = name.split(" ");
+			  for (i = 0; i < arr2.length; i++) {
+			    while (arr1.indexOf(arr2[i]) > -1) {
+			      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+			    }
+			  }
+			  element.className = arr1.join(" ");
+			}
+
+
+			/* Add active class to the current button (highlight it)        don't really need this part
+			var btnContainer = document.getElementById("myBtnContainer");
+			var btns = btnContainer.getElementsByClassName("btn");
+			for (var i = 0; i < btns.length; i++) {
+			  btns[i].addEventListener("click", function(){
+			    var current = document.getElementsByClassName("active");
+			    current[0].className = current[0].className.replace(" active", "");
+			    this.className += " active";
+			  });
+			}*/
+		</script>
+		<!--script id="dsq-count-scr" src="//tylermain-github-io.disqus.com/count.js" async></script-->
 	</body>
 </html>

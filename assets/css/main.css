@@ -7,6 +7,10 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+	.show {
+  		display: none !important;
+	}
+
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -109,7 +113,7 @@ input, select, textarea {
 	}
 
 	html, body {
-		background-color: #476466;
+		background-color: #252525;
 		overflow: hidden;
 	}
 
@@ -824,7 +828,7 @@ input, select, textarea {
 		top: 0;
 		width: 22.5em;
 		height: 100%;
-		background: #476466; /* the side panel background color */
+		background: #252525; /* the side panel background color */
 		outline: 0;
 		overflow-x: hidden;
 		overflow-y: auto;
@@ -876,7 +880,7 @@ input, select, textarea {
 		@media screen and (max-width: 980px) {
 
 			#main {
-				background: #476466; /* Middle size panel color */
+				background: #252525; /* Middle size panel color */
 			}
 
 				#main .toggle {
@@ -894,7 +898,7 @@ input, select, textarea {
 				-ms-transition: opacity 0.5s ease, visibility 0.5s;
 				transition: opacity 0.5s ease, visibility 0.5s;
 				width: 100%;
-				background: #476466; /* Mobile background color */
+				background: #252525; /* Mobile background color */
 				text-align: center;
 			}
 
@@ -918,14 +922,14 @@ input, select, textarea {
 /* About Page */
 
 	#about {
-		/*-moz-transition: opacity 0.75s ease, right 0.75s ease, left 0.75s ease, visibility 0.75s;
+		-moz-transition: opacity 0.75s ease, right 0.75s ease, left 0.75s ease, visibility 0.75s;
 		-webkit-transition: opacity 0.75s ease, right 0.75s ease, left 0.75s ease, visibility 0.75s;
 		-ms-transition: opacity 0.75s ease, right 0.75s ease, left 0.75s ease, visibility 0.75s;
-		transition: opacity 0.75s ease, right 0.75s ease, left 0.75s ease, visibility 0.75s;*/
+		transition: opacity 0.75s ease, right 0.75s ease, left 0.75s ease, visibility 0.75s;
 		-webkit-overflow-scrolling: touch;
 		top: 0;
 		height: 100%;
-		background: #476466; /* the side panel background color */
+		background: #252525; /* the side panel background color */
 		outline: 0;
 		overflow-x: hidden;
 		overflow-y: auto;
@@ -944,7 +948,7 @@ input, select, textarea {
 		@media screen and (max-width: 980px) {
 
 			#about {
-				background: #476466; /* Middle size panel color */
+				background: #252525; /* Middle size panel color */
 			}
 		}
 
@@ -955,7 +959,7 @@ input, select, textarea {
 				-webkit-transition: opacity 0.5s ease, visibility 0.5s;
 				-ms-transition: opacity 0.5s ease, visibility 0.5s;
 				transition: opacity 0.5s ease, visibility 0.5s;
-				background: #476466; /* Mobile background color */
+				background: #252525; /* Mobile background color */
 				text-align: center;
 			}
 		}		
@@ -1221,7 +1225,7 @@ input, select, textarea {
 
 				#footer .copyright li:first-child {
 					margin-left: 0;
-				}
+				}			
 
 /* Thumbnails */
 
@@ -1300,9 +1304,6 @@ input, select, textarea {
 				display: flex;
 			}
 		}
-
-/* Comments Button */
-	
 
 /* Viewer */
 
