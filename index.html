@@ -209,19 +209,47 @@
 				var mobileButton = document.getElementById("mobileButton");
 				var button1 = document.getElementById("button1");
 				function toggleThumbnails(){
-					if(isShowing){
-						thumbs.style.display = "none";
-						comments.style.display = "block";
-						mobileButton.innerText = "Pictures";
-						button1.innerText = "Pictures";
-						isShowing = false;
-					}
-					else{
-						thumbs.style.display = "flex";
-						comments.style.display = "none";
-						mobileButton.innerText = "Comments";
-						button1.innerText = "Comments";
-						isShowing = true;
+					if (button1.innerText == null) {
+						if(isShowing){
+							thumbs.style.display = "none";
+							comments.style.display = "block";
+							mobileButton.innerText = "Pictures";
+							isShowing = false;
+						}
+						else{
+							thumbs.style.display = "flex";
+							comments.style.display = "none";
+							mobileButton.innerText = "Comments";
+							isShowing = true;
+						}
+					} else if (mobileButton.innerText == null){
+						if(isShowing){
+							thumbs.style.display = "none";
+							comments.style.display = "block";
+							button1.innerText = "Pictures";
+							isShowing = false;
+						}
+						else{
+							thumbs.style.display = "flex";
+							comments.style.display = "none";
+							button1.innerText = "Comments";
+							isShowing = true;
+						}
+					} else {
+						if(isShowing){
+							thumbs.style.display = "none";
+							comments.style.display = "block";
+							mobileButton.innerText = "Pictures";
+							button1.innerText = "Pictures";
+							isShowing = false;
+						}
+						else{
+							thumbs.style.display = "flex";
+							comments.style.display = "none";
+							mobileButton.innerText = "Comments";
+							button1.innerText = "Comments";
+							isShowing = true;
+						}
 					}
 				}
 			</script>
