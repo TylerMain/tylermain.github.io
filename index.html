@@ -274,7 +274,7 @@
 			filterSelection("all")
 			function filterSelection(c) {
 			  var x, i;
-			  toggleThumbnails();
+			  toggleThumbnails(false);
 			  x = document.getElementsByClassName("article");
 			  if (c == 'all') {
 			    for (i = 0; i < x.length; i++) {
@@ -309,8 +309,8 @@
 			  element.className = arr1.join(" ");
 			}
 
-			function toggleThumbnails(){
-				var isShowing = true;
+			function toggleThumbnails(isShowing){
+				var isShowing;
 				var thumbs = document.getElementById("thumbnails");
 				var comments = document.getElementById("disqus_thread");
 				var mobileButton = document.getElementById("mobileButton");
