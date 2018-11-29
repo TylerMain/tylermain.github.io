@@ -211,7 +211,7 @@
 				function toggleThumbnails(){
 					if(isShowing){
 						thumbs.style.display = "none";
-						comments.style.display = "flex";
+						comments.style.display = "block";
 						mobileButton.innerText = "Pictures";
 						button1.innerText = "Pictures";
 						isShowing = false;
@@ -294,7 +294,8 @@
 			}
 		</script>
 		<script>
-			document.getElementById('disqus_thread').style.display = "none";
+			var comments = document.getElementById('disqus_thread');
+			comments.style.display = "none";
 			filterSelection("all")
 			function filterSelection(c) {
 			  var x, i;
