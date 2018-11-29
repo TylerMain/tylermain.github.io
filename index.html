@@ -272,11 +272,6 @@
 		</script>
 		<script>
 			filterSelection("all")
-			var isShowing = true;
-			var thumbs = document.getElementById("thumbnails")
-			var comments = document.getElementById("disqus_thread")
-			var mobileButton = document.getElementById("mobileButton")
-			var button1 = document.getElementById("button1")
 			function filterSelection(c) {
 			  var x, i;
 			  toggleThumbnails();
@@ -315,6 +310,11 @@
 			}
 
 			function toggleThumbnails(){
+				var isShowing = true;
+				var thumbs = document.getElementById("thumbnails");
+				var comments = document.getElementById("disqus_thread");
+				var mobileButton = document.getElementById("mobileButton");
+				var button1 = document.getElementById("button1");
 				if(isShowing){
 					thumbs.style.display = "none";
 					comments.style.display = "block";
