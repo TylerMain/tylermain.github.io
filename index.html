@@ -297,7 +297,7 @@
 			filterSelection("all")
 			function filterSelection(c) {
 			  var x, i;
-			  toggleThumbnails();
+			  toggleThumbnails(isShowing = false);
 			  x = document.getElementsByClassName("article");
 			  if (c == 'all') {
 			    for (i = 0; i < x.length; i++) {
