@@ -209,7 +209,7 @@
 				var mobileButton = document.getElementById("mobileButton");
 				var button1 = document.getElementById("button1");
 				function toggleThumbnails(){
-					if (button1.innerText == null) {
+					if (button1 == null) {
 						if(isShowing){
 							thumbs.style.display = "none";
 							comments.style.display = "block";
@@ -222,7 +222,7 @@
 							mobileButton.innerText = "Comments";
 							isShowing = true;
 						}
-					} else if (mobileButton.innerText == null){
+					} else if (mobileButton == null){
 						if(isShowing){
 							thumbs.style.display = "none";
 							comments.style.display = "block";
