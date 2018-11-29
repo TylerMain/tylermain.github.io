@@ -294,11 +294,11 @@
 			}
 		</script>
 		<script>
-			var comments = document.getElementById('disqus_thread');
-			comments.style.display = "none";
 			filterSelection("all")
 			function filterSelection(c) {
 			  var x, i;
+			  var comments = document.getElementById('disqus_thread');
+			  comments.style.display = "none";
 			  x = document.getElementsByClassName("article");
 			  if (c == 'all') {
 			    for (i = 0; i < x.length; i++) {
