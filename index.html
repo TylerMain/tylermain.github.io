@@ -202,6 +202,29 @@
 					}
 				}
 			</script>
+			<script>
+				var isShowing = true;
+				var thumbs = document.getElementById("thumbnails")
+				var comments = document.getElementById("disqus_thread")
+				var mobileButton = document.getElementById("mobileButton")
+				var button1 = document.getElementById("button1")
+				function toggleThumbnails(){
+					if(isShowing){
+						thumbs.style.display = "none";
+						comments.style.display = "block";
+						mobileButton.innerText = "Pictures";
+						button1.innerText = "Pictures";
+						isShowing = false;
+					}
+					else{
+						thumbs.style.display = "flex";
+						comments.style.display = "none";
+						mobileButton.innerText = "Comments";
+						button1.innerText = "Comments";
+						isShowing = true;
+					}
+				}
+			</script>
 		<script>
 			var volumeTickWidth = 1;
 			var maxRotation = 1800;
@@ -274,7 +297,7 @@
 			filterSelection("all")
 			function filterSelection(c) {
 			  var x, i;
-			  toggleThumbnails(false);
+			  toggleThumbnails();
 			  x = document.getElementsByClassName("article");
 			  if (c == 'all') {
 			    for (i = 0; i < x.length; i++) {
@@ -307,28 +330,6 @@
 			    }
 			  }
 			  element.className = arr1.join(" ");
-			}
-
-			function toggleThumbnails(isShowing){
-				var isShowing;
-				var thumbs = document.getElementById("thumbnails");
-				var comments = document.getElementById("disqus_thread");
-				var mobileButton = document.getElementById("mobileButton");
-				var button1 = document.getElementById("button1");
-				if(isShowing){
-					thumbs.style.display = "none";
-					comments.style.display = "block";
-					mobileButton.innerText = "Pictures";
-					button1.innerText = "Pictures";
-					isShowing = false;
-				}
-				else{
-					thumbs.style.display = "flex";
-					comments.style.display = "none";
-					mobileButton.innerText = "Comments";
-					button1.innerText = "Comments";
-					isShowing = true;
-				}
 			}
 		</script>
 		<script id="dsq-count-scr" src="//tylermain-github-io.disqus.com/count.js" async></script>
