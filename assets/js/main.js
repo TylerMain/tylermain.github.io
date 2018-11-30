@@ -209,10 +209,10 @@ var main = (function($) { var _ = {
 
 		// Viewer.
 
-			// Hide main wrapper on tap (<= medium only).
+			// Hide main wrapper on tap (<= small only).
 				_.$viewer.on('touchend', function() {
 
-					if (breakpoints.active('<=medium'))
+					if (breakpoints.active('<=small'))
 						_.hide();
 
 				});
@@ -512,9 +512,9 @@ var main = (function($) { var _ = {
 		// Lock.
 			_.locked = true;
 
-		// Hide main wrapper if less than 480p is active. Was medium, but I changed to xsmall.
+		// Hide main wrapper if less than 480p is active. Was medium, but I changed to small.
 			if (!noHide
-			&&	breakpoints.active('<=xsmall'))
+			&&	breakpoints.active('<=small'))
 				_.hide();
 
 		// Get slides.
