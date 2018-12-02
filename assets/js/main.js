@@ -432,6 +432,8 @@ var main = (function($) { var _ = {
 		 							.css('background-image', '')
 		 							.css('background-position', ($thumbnail.data('position') || 'center'));
 
+		 						s.$slideImage.addClass('panzoom'); //works but only effects first slide
+
 						// Caption.
 							s.$slideCaption = s.$slide.find('.caption');
 

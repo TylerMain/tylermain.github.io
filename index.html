@@ -10,6 +10,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<script src="assets/js/panzoom.js"></script>
 		<script type="text/javascript" src="assets/js/jquery-3.3.1.min.js"></script>
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/utils/Draggable.min.js"></script>
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
@@ -699,6 +700,14 @@
 			  }
 			  element.className = arr1.join(" ");
 			}
+		</script>
+		<script>
+			PanZoom(".panzoom", {
+				minScale : 0.1,
+				maxScale : 5,
+				increment : 0.05,
+				liner : false
+			});
 		</script>
 		<!--script id="dsq-count-scr" src="//tylermain-github-io.disqus.com/count.js" async></script-->
 	</body>
