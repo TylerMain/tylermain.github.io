@@ -1395,11 +1395,23 @@ input, select, textarea {
 				position: relative;
 				border: 0;
 				outline: 0;
+				height: 100%;
+				width: 100%;
+				border: 1px solid grey;
 			}
 
 				#thumbnails article .thumbnail img {
-					display: block;
-					width: 100%;
+					display: flex;
+					max-height: 100px;
+					max-width: 100%;
+					background-position: center;
+					background-size: contain;
+					margin-left: auto;
+					margin-right: auto;
+					margin: auto;
+					position: relative;
+					top: 50%;
+					transform: translateY(-50%);
 				}
 
 				#thumbnails article .thumbnail:before {
