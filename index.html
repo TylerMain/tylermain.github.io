@@ -480,7 +480,8 @@
 					</section>
 
 				<!-- Comments -->
-					
+					<script src="//www.powr.io/powr.js?external-type=html"></script> 
+ 					<div class="powr-comments" id="a030aa31_1543874795"></div>
 
 				<!-- Footer -->
 					<footer id="footer">
@@ -522,47 +523,47 @@
 			<script>
 				var isShowing = true;
 				var thumbs = document.getElementById("thumbnails");
-				//var comments = document.getElementById("disqus_thread");
+				var comments = document.getElementById("powr-comments");
 				var mobileButton = document.getElementById("mobileButton");
 				var button1 = document.getElementById("button1");
 				function toggleThumbnails(){
 					if (button1 == null) {
 						if(isShowing){
 							thumbs.style.display = "none";
-							//comments.style.display = "block";
+							comments.style.display = "block";
 							mobileButton.innerText = "Pictures";
 							isShowing = false;
 						}
 						else{
 							thumbs.style.display = "flex";
-							//comments.style.display = "none";
+							comments.style.display = "none";
 							mobileButton.innerText = "Comments";
 							isShowing = true;
 						}
 					} else if (mobileButton == null){
 						if(isShowing){
 							thumbs.style.display = "none";
-							//comments.style.display = "block";
+							comments.style.display = "block";
 							button1.innerText = "Pictures";
 							isShowing = false;
 						}
 						else{
 							thumbs.style.display = "flex";
-							//comments.style.display = "none";
+							comments.style.display = "none";
 							button1.innerText = "Comments";
 							isShowing = true;
 						}
 					} else {
 						if(isShowing){
 							thumbs.style.display = "none";
-							//comments.style.display = "block";
+							comments.style.display = "block";
 							mobileButton.innerText = "Pictures";
 							button1.innerText = "Pictures";
 							isShowing = false;
 						}
 						else{
 							thumbs.style.display = "flex";
-							//comments.style.display = "none";
+							comments.style.display = "none";
 							mobileButton.innerText = "Comments";
 							button1.innerText = "Comments";
 							isShowing = true;
