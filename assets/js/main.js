@@ -570,6 +570,13 @@ var main = (function($) { var _ = {
 										// Set background image.
 											newSlide.$slideImage
 												.css('background-image', 'url(' + newSlide.url + ')');
+											newSlide.$slideImage.addClass('panzoom');
+											PanZoom(".panzoom", {
+												minScale : 0.1,
+												maxScale : 5,
+												increment : 0.05,
+												liner : false
+											});
 
 										// Mark as loaded.
 											newSlide.loaded = true;
