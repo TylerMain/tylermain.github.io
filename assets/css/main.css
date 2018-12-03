@@ -1687,7 +1687,7 @@ input, select, textarea {
 				left: 50%;
 				width: 3em;
 				height: 3em;
-				background-image: url("images/spinner.svg");
+				background-image: url("images/spinner.png");
 				background-position: center;
 				background-repeat: no-repeat;
 				background-size: contain;
