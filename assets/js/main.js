@@ -432,13 +432,9 @@ var main = (function($) { var _ = {
 		 							.css('background-image', '')
 		 							.css('background-position', ($thumbnail.data('position') || 'center'));
 
-		 						s.$slideImage.addClass('panzoom'); //works but only effects first slide
-		 						PanZoom(".panzoom", {
-									minScale : 0.1,
-									maxScale : 5,
-									increment  : 0.05,
-									liner  : false
-								});
+		 						//s.$slideImage.addClass('.image'); //works but only effects first slide
+		 						//var image = document.querySelector('.image');
+		 						//panzoom(document.querySelector('.image'));
 
 		 						
 
@@ -578,13 +574,9 @@ var main = (function($) { var _ = {
 										// Set background image.
 											newSlide.$slideImage
 												.css('background-image', 'url(' + newSlide.url + ')');
-											newSlide.$slideImage.addClass('panzoom');
-											PanZoom(".panzoom", {
-												minScale : 0.1,
-												maxScale : 5,
-												increment  : 0.05,
-												liner  : false
-											});
+											//newSlide.$slideImage.addClass('.panzoom');
+											//var image = document.querySelector('.image');
+											panzoom(document.querySelector('.image'));
 
 										// Mark as loaded.
 											newSlide.loaded = true;
