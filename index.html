@@ -82,6 +82,12 @@
 							<button onclick="toggleThumbnails()" type="button" id=button1>Comments</button>
 						</article-->
 
+						<article class="article portrait 2019">
+							<a class="thumbnail" id="imageName" href="images/fulls/2019-01-21-julia.png" data-position="left center"><img src="images/thumbs/73.png" alt="" /></a>
+							<h2>Julia Animation</h2>
+							<p>Started: 2019-01-15, Finished: 2019-01-21, Hours Spent: 11 hours and 40 minutes
+							<button onclick="Animate('julia')" type="button" >Animate</button>
+						</article>
 						<article class="article other 2019">
 							<a class="thumbnail" href="images/fulls/2019-01-11-randomBrushes.png" data-position="left center"><img src="images/thumbs/72.png" alt="" /></a>
 							<h2>Random Brushes</h2>
@@ -606,6 +612,21 @@
 							isShowing = true;
 						}
 					}
+				}
+				var animationPlaying = false;
+				function Animate(name){
+					if (name == "julia"){
+						activeImage = document.getElementsByClassName("image panzoom")[0];
+						if (animationPlaying == false){
+							activeImage.style.backgroundImage = "url(images/animations/2019-01-21-julia.gif)";
+							animationPlaying = true;
+						}
+						else{
+							activeImage.style.backgroundImage = "url(images/fulls/2019-01-21-julia.png)";
+							animationPlaying = false;
+						}
+					}
+					
 				}
 			</script>
 		<script> //volume wheel
