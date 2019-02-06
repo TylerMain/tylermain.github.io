@@ -82,6 +82,12 @@
 							<button onclick="toggleThumbnails()" type="button" id=button1>Comments</button>
 						</article-->
 						<article class="article portrait 2019">
+							<a class="thumbnail" id="imageName" href="images/fulls/2019-01-26-penny.png" data-position="left center"><img src="images/thumbs/76.png" alt="" /></a>
+							<h2>Be The Penny Animation</h2>
+							<p>Started: 2019-01-26, Finished: 2019-02-05, Hours Spent: 21 hours and 37 minutes
+							<button onclick="Animate('penny')" type="button" >Animate</button></p>
+						</article>
+						<article class="article portrait 2019">
 							<a class="thumbnail" id="imageName" href="images/fulls/2019-01-24-uthredOfBebbanburg.png" data-position="left center"><img src="images/thumbs/75.png" alt="" /></a>
 							<h2>Uhtred of Bebbanburg</h2>
 							<p>Started: 2019-01-24, Finished: 2019-01-26, Hours Spent: 5 hour and 5 minutes</p>
@@ -508,6 +514,17 @@
 						}
 						else{
 							activeImage.style.backgroundImage = "url(images/fulls/2019-01-21-julia.png)";
+							animationPlaying = false;
+						}
+					}
+					if (name == "penny"){
+						activeImage = document.getElementsByClassName("image panzoom")[0];
+						if (animationPlaying == false){
+							activeImage.style.backgroundImage = "url(images/animations/2019-01-26-BeThePenny.gif)";
+							animationPlaying = true;
+						}
+						else{
+							activeImage.style.backgroundImage = "url(images/fulls/2019-01-26-penny.png)";
 							animationPlaying = false;
 						}
 					}
