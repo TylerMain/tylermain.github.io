@@ -81,6 +81,12 @@
 							<p>Started: 2018-12-06, Hours Spent: didn't time this one</p>
 							<button onclick="toggleThumbnails()" type="button" id=button1>Comments</button>
 						</article-->
+						<article class="article landscape 2019">
+							<a class="thumbnail" id="imageName" href="images/fulls/2019-03-01-aWalkInSnow.png" data-position="left center"><img src="images/thumbs/80.png" alt="" /></a>
+							<h2>A Walk In Snow</h2>
+							<p>Started: 2019-03-01, Finished: 2019-03-01, Hours Spent: 3 hours and 54 minutes
+								<button onclick="Animate('snow')" type="button" >Animate</button></p>
+						</article>
 						<article class="article portrait 2019">
 							<a class="thumbnail" id="imageName" href="images/fulls/2019-02-18-aliceQuinn.png" data-position="left center"><img src="images/thumbs/79.png" alt="" /></a>
 							<h2>Alice Quinn</h2>
@@ -564,6 +570,17 @@
 						}
 						else{
 							activeImage.style.backgroundImage = "url(images/fulls/2019-02-09-charlieQuinn.png)";
+							animationPlaying = false;
+						}
+					}
+					if (name == "snow"){
+						activeImage = document.getElementsByClassName("image panzoom")[0];
+						if (animationPlaying == false){
+							activeImage.style.backgroundImage = "url(images/animations/2019-03-01-aWalkInSnow.gif)";
+							animationPlaying = true;
+						}
+						else{
+							activeImage.style.backgroundImage = "url(images/fulls/2019-03-01-aWalkInSnow.png)";
 							animationPlaying = false;
 						}
 					}
