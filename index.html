@@ -82,15 +82,26 @@
 							<button onclick="toggleThumbnails()" type="button" id=button1>Comments</button>
 						</article-->
 						<article class="article portrait 2019">
+							<a class="thumbnail" id="imageName" href="images/fulls/2019-02-18-aliceQuinn.png" data-position="left center"><img src="images/thumbs/79.png" alt="" /></a>
+							<h2>Alice Quinn</h2>
+							<p>Started: 2019-02-18, Finished: 2019-02-28, Hours Spent: 8 hours and 32 minutes, (gave up on, may redo sometime)</p>
+						</article>
+						<article class="article portrait 2019">
+							<a class="thumbnail" id="imageName" href="images/fulls/2019-02-09-charlieQuinn.png" data-position="left center"><img src="images/thumbs/78.png" alt="" /></a>
+							<h2>Charlie Quinn Animation</h2>
+							<p>Started: 2019-02-09, Finished: 2019-02-11, Hours Spent: 14 hours and 7 minutes
+							<button onclick="Animate('charlie')" type="button" >Animate</button></p>
+						</article>
+						<article class="article portrait 2019">
 							<a class="thumbnail" id="imageName" href="images/fulls/2019-02-06-elonMusk.png" data-position="left center"><img src="images/thumbs/77.png" alt="" /></a>
 							<h2>Elon Musk Animation</h2>
-							<p>Started: 2019-02-06, Finished: 2019-02-07, Hours Spent: 5 hours and 33 minutes</p>
+							<p>Started: 2019-02-06, Finished: 2019-02-07, Hours Spent: 5 hours and 33 minutes
 							<button onclick="Animate('elon')" type="button" >Animate</button></p>
 						</article>
 						<article class="article portrait 2019">
 							<a class="thumbnail" id="imageName" href="images/fulls/2019-01-26-penny.png" data-position="left center"><img src="images/thumbs/76.png" alt="" /></a>
 							<h2>Be The Penny Animation</h2>
-							<p>Started: 2019-01-26, Finished: 2019-02-05, Hours Spent: 21 hours and 37 minutes</p>
+							<p>Started: 2019-01-26, Finished: 2019-02-05, Hours Spent: 21 hours and 37 minutes
 							<button onclick="Animate('penny')" type="button" >Animate</button></p>
 						</article>
 						<article class="article portrait 2019">
@@ -545,7 +556,17 @@
 							animationPlaying = false;
 						}
 					}
-					
+					if (name == "charlie"){
+						activeImage = document.getElementsByClassName("image panzoom")[0];
+						if (animationPlaying == false){
+							activeImage.style.backgroundImage = "url(images/animations/2019-02-09-charlieQuinn.gif)";
+							animationPlaying = true;
+						}
+						else{
+							activeImage.style.backgroundImage = "url(images/fulls/2019-02-09-charlieQuinn.png)";
+							animationPlaying = false;
+						}
+					}
 				}
 			</script>
 		<script> //volume wheel
