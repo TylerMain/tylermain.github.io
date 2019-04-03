@@ -507,7 +507,7 @@ var main = (function($) { var _ = {
 
 		// Already at index and xsmall isn't active? Bail.
 			if (_.current == index
-			&&	!breakpoints.active('<=xsmall'))
+			&&	!breakpoints.active('<=small'))
 				return;
 
 		// Locked? Bail.
