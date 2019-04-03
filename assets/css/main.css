@@ -382,7 +382,7 @@ input, select, textarea {
 			opacity: 0.25;
 		}
 
-		@media screen and (max-width: 736px) {
+		/*@media screen and (max-width: 736px) {
 
 			input[type="submit"],
 			input[type="reset"],
@@ -402,7 +402,7 @@ input, select, textarea {
 			.button {
 				display: none;
 			}
-		}
+		}*/
 
 /* Form */
 
