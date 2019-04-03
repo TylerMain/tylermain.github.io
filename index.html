@@ -54,7 +54,7 @@
 					  <div>
 					    <img id="wheel" src="images\volumeWheel\5.png" />
 					  </div>
-					  <d onclick="toggleThumbnails()" type="button" id=mobileButton>Comments</d>
+					  <!--d onclick="toggleThumbnails()" type="button" id=mobileButton>Comments</d-->
 					  <!--div id="volumeBarHolder">
 					    <div id="volumeBar"></div>
 					  </div-->
@@ -78,8 +78,7 @@
 						<!--article class="article portrait 2018"> 
 							<a class="thumbnail" href="images/wip.png" data-position="left center"><img src="images/wipThumb.png" alt="" /></a>
 							<h2>Work in Progress</h2>
-							<p>Started: 2018-12-06, Hours Spent: didn't time this one</p>
-							<button onclick="toggleThumbnails()" type="button" id=button1>Comments</button>
+							<p>Started: 2018-12-06, Hours Spent: didn't time this one</p>id=button1>Comments</button>
 						</article-->
 						<article class="article landscape 2019">
 							<a class="thumbnail" id="imageName" href="images/fulls/2019-03-01-aWalkInSnow.png" data-position="left center"><img src="images/thumbs/80.png" alt="" /></a>
@@ -653,6 +652,21 @@
 			  	document.getElementById('wheel').src="images/volumeWheel/volumeWheel.png";
 			  }
 			}
+		</script>
+		<script>
+			var isShowing;// = true;
+			var thumbs = document.getElementById("thumbnails");
+			function toggleThumbnails(){
+				if(isShowing){
+						thumbs.style.display = "none";
+						isShowing = false;
+					}
+					else{
+						thumbs.style.display = "flex";
+						isShowing = true;
+					}
+				}
+			//}
 		</script>
 		<script> //Sorting System
 			filterSelection("all")
