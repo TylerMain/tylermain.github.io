@@ -213,7 +213,7 @@ var main = (function($) { var _ = {
 				_.$viewer.on('touchend', function() {
 
 					if (breakpoints.active('<=xsmall'))
-						_.hide();
+						_.toggleui();
 
 				});
 
@@ -249,12 +249,12 @@ var main = (function($) { var _ = {
 								_.previous();
 
 						// Swipe Up (toggle ui)
-							else if ( (diffX < boundary && diffX > (-1 * boundary)) && (diffY > delta))
-								_.toggleui();
+							//else if ( (diffX < boundary && diffX > (-1 * boundary)) && (diffY > delta))
+								//_.toggleui();
 
 						// Swipe Down (toggle ui)
-							else if ( (diffX < boundary && diffX > (-1 * boundary)) && (diffY < (-1 * delta)))
-								_.toggleui();
+							//else if ( (diffX < boundary && diffX > (-1 * boundary)) && (diffY < (-1 * delta)))
+								//_.toggleui();
 
 						// Overscroll fix.
 							var	th = _.$viewer.outerHeight(),
