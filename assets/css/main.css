@@ -1587,6 +1587,7 @@ input, select, textarea {
 				z-index: 1;
 				right: 0;
 				background-position: calc(100% - 0.75em) 0.75em;
+				opacity: 1;
 			}
 
 			#viewer .inner .toggle:hover {
@@ -1606,6 +1607,7 @@ input, select, textarea {
 				background-repeat: no-repeat;
 				background-size: contain;
 				cursor: pointer;
+				opacity: 1;
 			}
 
 			#viewer .inner .nav-next:hover,
@@ -1651,6 +1653,7 @@ input, select, textarea {
 				width: 100%;
 				color: rgba(255, 255, 255, 0.5);
 				z-index: 1;
+				opacity: 1;
 			}
 
 				#viewer .slide .caption h2, #viewer .slide .caption h3, #viewer .slide .caption h4, #viewer .slide .caption h5, #viewer .slide .caption h6 {

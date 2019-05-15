@@ -119,6 +119,7 @@ var main = (function($) { var _ = {
 		// Space: Next.
 			32: function() {
 				_.next();
+				//_.toggleui();
 			},
 
 		// Right Arrow: Next.
@@ -482,7 +483,6 @@ var main = (function($) { var _ = {
 	 * Initialize stuff.
 	 */
 	init: function() {
-
 		// Breakpoints.
 			breakpoints({
 				xlarge:  [ '1281px',  '1680px' ],
@@ -747,17 +747,21 @@ var main = (function($) { var _ = {
 	},
 
 	toggleui: function(){
-		if (_.$caption.style.display == "none"){
-			_.$caption.style.display = "block";
-			_.$navNext.style.display = "block";
-			_.$navPrevious.style.display = "block";
-			_.$toggle.style.display = "block";
+		var myCaption = document.getElementsByClassName("caption")[0];
+		var myToggle = document.getElementsByClassName("toggle")[1];
+		var myNext = document.getElementsByClassName("nav-next")[0];
+		var myPrevious = document.getElementsByClassName("nav-previous")[0];
+		if (myCaption.style.opacity == 0){
+			myCaption.style.opacity = 1;
+			myToggle.style.opacity = 1;
+			myNext.style.opacity = 1;
+			myPrevious.style.opacity = 1;
 		}
-		else if(_.$caption.style.display == "block"){
-			_.$caption.style.display = "none";
-			_.$navNext.style.display = "none";
-			_.$navPrevious.style.display = "none";
-			_.$toggle.style.display = "none";
+		else{
+			myCaption.style.opacity = 0;
+			myToggle.style.opacity = 0;
+			myNext.style.opacity = 0;
+			myPrevious.style.opacity = 0;
 		}
 	},
 
