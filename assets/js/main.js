@@ -259,6 +259,26 @@ var main = (function($) { var _ = {
 
 							}
 
+					})
+					.on('touchend', function(event) {
+
+						// Was it a movement? Bail.
+							if ((_.$viewer.touchPosX != event.originalEvent.touches[0].pageX) || (_.$viewer.touchPosY != event.originalEvent.touches[0].pageY)){
+								return;
+							}
+						// toggle slide information
+							if (div.caption.style.display == "none"){
+								div.caption.style.display = "block";
+								div.navNext.style.display = "block";
+								div.navPrevious.style.display = "block";
+								div.toggle.style.display = "block";
+							}
+							else if(div.caption.style.display == "block"){
+								div.caption.style.display = "none";
+								div.navNext.style.display = "none";
+								div.navPrevious.style.display = "none";
+								div.toggle.style.display = "none";
+							}
 					});
 
 		// Main.
