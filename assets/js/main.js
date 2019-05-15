@@ -210,12 +210,12 @@ var main = (function($) { var _ = {
 		// Viewer.
 
 			// Hide main wrapper on tap (<= small only).
-				//_.$viewer.on('touchend', function() {
+				_.$viewer.on('touchend', function() {
 
-					//if (breakpoints.active('<=small'))
-						//_.hide();
+					if (breakpoints.active('<=small'))
+						_.hide();
 
-				//});
+				});
 
 			// Touch gestures.
 				_.$viewer
@@ -260,8 +260,8 @@ var main = (function($) { var _ = {
 
 							}
 
-					})
-					.on('touches', function(event) { //Hide UI
+					});
+					/*.on('touches', function(event) { //Hide UI
 
 						// Was it a movement? Bail.
 							//if ((_.$viewer.touchPosX != event.originalEvent.touches[0].pageX) || (_.$viewer.touchPosY != event.originalEvent.touches[0].pageY)){
@@ -280,7 +280,7 @@ var main = (function($) { var _ = {
 								_.$navPrevious.style.display = "none";
 								_.$toggle.style.display = "none";
 							}
-					});
+					});*/
 
 		// Main.
 
