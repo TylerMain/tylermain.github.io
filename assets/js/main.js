@@ -267,17 +267,17 @@ var main = (function($) { var _ = {
 								return;
 							}
 						// toggle slide information
-							if (div.caption.style.display == "none"){
-								div.caption.style.display = "block";
-								div.navNext.style.display = "block";
-								div.navPrevious.style.display = "block";
-								div.toggle.style.display = "block";
+							if (_.$caption.style.display == "none"){
+								_.$caption.style.display = "block";
+								_.$navNext.style.display = "block";
+								_.$navPrevious.style.display = "block";
+								_.$toggle.style.display = "block";
 							}
-							else if(div.caption.style.display == "block"){
-								div.caption.style.display = "none";
-								div.navNext.style.display = "none";
-								div.navPrevious.style.display = "none";
-								div.toggle.style.display = "none";
+							else if(_.$caption.style.display == "block"){
+								_.$caption.style.display = "none";
+								_.$navNext.style.display = "none";
+								_.$navPrevious.style.display = "none";
+								_.$toggle.style.display = "none";
 							}
 					});
 
