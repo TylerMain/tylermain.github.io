@@ -130,7 +130,6 @@ var main = (function($) { var _ = {
 			37: function() {
 				_.previous();
 			}
-
 	},
 
 	/**
@@ -247,6 +246,14 @@ var main = (function($) { var _ = {
 						// Swipe right (previous).
 							else if ( (diffY < boundary && diffY > (-1 * boundary)) && (diffX < (-1 * delta)) )
 								_.previous();
+
+						// Swipe Up (toggle ui)
+							else if ( (diffX < boundary && diffX > (-1 * boundary)) && (diffY > delta))
+								_.toggleui();
+
+						// Swipe Down (toggle ui)
+							else if ( (diffX < boundary && diffX > (-1 * boundary)) && (diffY < (-1 * delta)))
+								_.toggleui();
 
 						// Overscroll fix.
 							var	th = _.$viewer.outerHeight(),
