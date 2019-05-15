@@ -261,12 +261,12 @@ var main = (function($) { var _ = {
 							}
 
 					})
-					.on('touchend', function(event) { //Hide UI
+					.on('touches', function(event) { //Hide UI
 
 						// Was it a movement? Bail.
-							if ((_.$viewer.touchPosX != event.originalEvent.touches[0].pageX) || (_.$viewer.touchPosY != event.originalEvent.touches[0].pageY)){
-								return;
-							}
+							//if ((_.$viewer.touchPosX != event.originalEvent.touches[0].pageX) || (_.$viewer.touchPosY != event.originalEvent.touches[0].pageY)){
+								//return;
+							//}
 						// toggle slide information
 							if (_.$caption.style.display == "none"){
 								_.$caption.style.display = "block";
