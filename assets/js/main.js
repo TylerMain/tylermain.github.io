@@ -210,12 +210,12 @@ var main = (function($) { var _ = {
 		// Viewer.
 
 			// Hide main wrapper on tap (<= small only).
-				_.$viewer.on('touchend', function() {
+				//_.$viewer.on('touchend', function() {
 
-					if (breakpoints.active('<=small'))
-						_.hide();
+					//if (breakpoints.active('<=small'))
+						//_.hide();
 
-				});
+				//});
 
 			// Touch gestures.
 				_.$viewer
@@ -226,26 +226,7 @@ var main = (function($) { var _ = {
 							_.$viewer.touchPosY = event.originalEvent.touches[0].pageY;
 
 					})
-					.on('touches', function(event) { //Hide UI
-
-						// Was it a movement? Bail.
-							//if ((_.$viewer.touchPosX != event.originalEvent.touches[0].pageX) || (_.$viewer.touchPosY != event.originalEvent.touches[0].pageY)){
-								//return;
-							//}
-						// toggle slide information
-							if (_.$caption.style.display == "none"){
-								_.$caption.style.display = "block";
-								_.$navNext.style.display = "block";
-								_.$navPrevious.style.display = "block";
-								_.$toggle.style.display = "block";
-							}
-							else if(_.$caption.style.display == "block"){
-								_.$caption.style.display = "none";
-								_.$navNext.style.display = "none";
-								_.$navPrevious.style.display = "none";
-								_.$toggle.style.display = "none";
-							}
-					})
+					
 					.on('touchmove', function(event) {
 
 						// No start position recorded? Bail.
@@ -279,6 +260,26 @@ var main = (function($) { var _ = {
 
 							}
 
+					})
+					.on('touchend', function(event) { //Hide UI
+
+						// Was it a movement? Bail.
+							if ((_.$viewer.touchPosX != event.originalEvent.touches[0].pageX) || (_.$viewer.touchPosY != event.originalEvent.touches[0].pageY)){
+								return;
+							}
+						// toggle slide information
+							if (_.$caption.style.display == "none"){
+								_.$caption.style.display = "block";
+								_.$navNext.style.display = "block";
+								_.$navPrevious.style.display = "block";
+								_.$toggle.style.display = "block";
+							}
+							else if(_.$caption.style.display == "block"){
+								_.$caption.style.display = "none";
+								_.$navNext.style.display = "none";
+								_.$navPrevious.style.display = "none";
+								_.$toggle.style.display = "none";
+							}
 					});
 
 		// Main.
