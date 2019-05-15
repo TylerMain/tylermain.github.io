@@ -212,8 +212,8 @@ var main = (function($) { var _ = {
 			// Hide main wrapper on tap (<= small only).
 				_.$viewer.on('touchend', function() {
 
-					if (breakpoints.active('<=small'))
-						_.hide();
+					if (breakpoints.active('<=xsmall'))
+						_.toggleui();
 
 				});
 
@@ -261,26 +261,6 @@ var main = (function($) { var _ = {
 							}
 
 					});
-					/*.on('touches', function(event) { //Hide UI
-
-						// Was it a movement? Bail.
-							//if ((_.$viewer.touchPosX != event.originalEvent.touches[0].pageX) || (_.$viewer.touchPosY != event.originalEvent.touches[0].pageY)){
-								//return;
-							//}
-						// toggle slide information
-							if (_.$caption.style.display == "none"){
-								_.$caption.style.display = "block";
-								_.$navNext.style.display = "block";
-								_.$navPrevious.style.display = "block";
-								_.$toggle.style.display = "block";
-							}
-							else if(_.$caption.style.display == "block"){
-								_.$caption.style.display = "none";
-								_.$navNext.style.display = "none";
-								_.$navPrevious.style.display = "none";
-								_.$toggle.style.display = "none";
-							}
-					});*/
 
 		// Main.
 
@@ -759,6 +739,21 @@ var main = (function($) { var _ = {
 
 	},
 
+	toggleui: function(){
+		if (_.$caption.style.display == "none"){
+			_.$caption.style.display = "block";
+			_.$navNext.style.display = "block";
+			_.$navPrevious.style.display = "block";
+			_.$toggle.style.display = "block";
+		}
+		else if(_.$caption.style.display == "block"){
+			_.$caption.style.display = "none";
+			_.$navNext.style.display = "none";
+			_.$navPrevious.style.display = "none";
+			_.$toggle.style.display = "none";
+		}
+	},
+
 	/**
 	 * Toggles main wrapper.
 	 */
@@ -770,5 +765,7 @@ var main = (function($) { var _ = {
 			_.hide();
 
 	},
+
+	
 
 }; return _; })(jQuery); main.init();
