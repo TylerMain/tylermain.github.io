@@ -213,7 +213,7 @@ var main = (function($) { var _ = {
 				_.$viewer.on('touchend', function() {
 
 					if (breakpoints.active('<=xsmall'))
-						_.toggleui();
+						_.hide();
 
 				});
 
