@@ -224,7 +224,7 @@ var main = (function($) { var _ = {
 					//if (breakpoints.active('<=xsmall'))
 						//_.toggleui();
 
-				});
+				//});
 
 			// Touch gestures.
 				_.$viewer
