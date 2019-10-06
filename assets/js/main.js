@@ -66,6 +66,12 @@ var main = (function($) { var _ = {
 	$toggle: null,
 
 	/**
+	 * Toggle.
+	 * @var {jQuery}
+	 */
+	$toggleui: null,
+
+	/**
 	 * Nav (next).
 	 * @var {jQuery}
 	 */
@@ -119,7 +125,6 @@ var main = (function($) { var _ = {
 		// Space: Next.
 			32: function() {
 				_.next();
-				//_.toggleui();
 			},
 
 		// Right Arrow: Next.
@@ -130,6 +135,10 @@ var main = (function($) { var _ = {
 		// Left Arrow: Previous.
 			37: function() {
 				_.previous();
+			},
+
+			72: function(){
+				_.toggleui();
 			}
 	},
 
@@ -249,12 +258,12 @@ var main = (function($) { var _ = {
 								_.previous();
 
 						// Swipe Up (toggle ui)
-							//else if ( (diffX < boundary && diffX > (-1 * boundary)) && (diffY > delta))
-								//_.toggleui();
+							else if ( (diffX < boundary && diffX > (-1 * boundary)) && (diffY > delta))
+								_.toggleui();
 
 						// Swipe Down (toggle ui)
-							//else if ( (diffX < boundary && diffX > (-1 * boundary)) && (diffY < (-1 * delta)))
-								//_.toggleui();
+							else if ( (diffX < boundary && diffX > (-1 * boundary)) && (diffY < (-1 * delta)))
+								_.toggleui();
 
 						// Overscroll fix.
 							var	th = _.$viewer.outerHeight(),
@@ -431,7 +440,7 @@ var main = (function($) { var _ = {
 					// Slide.
 
 						// Create elements.
-	 						s.$slide = $('<div class="slide"><div class="caption"></div><div class="image"></div></div>');
+	 						s.$slide = $('<div class="slide"><div class="caption" style="opacity: 1;"></div><div class="image"></div></div>');
 
 	 					// Image.
  							s.$slideImage = s.$slide.children('.image');
