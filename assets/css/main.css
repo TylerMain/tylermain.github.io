@@ -29,6 +29,7 @@ section, summary, time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;}
 
+
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
@@ -121,8 +122,8 @@ input, select, textarea {
 	}
 
 	html, body {
-		background-color: #252525;
-		overflow: hidden;
+		background-color: #07030f;
+		/*overflow: hidden;*/
 	}
 
 /* Type */
@@ -148,7 +149,7 @@ input, select, textarea {
 		}
 
 	body {
-		background-color: #fff;
+		background-color: transparent;
 		color: #aaa;
 	}
 
@@ -897,7 +898,7 @@ input, select, textarea {
 		top: 0;
 		width: 22.5em;
 		height: 100%;
-		background: #252525; /* the side panel background color */
+		background: #07030f; /* the side panel background color */
 		outline: 0;
 		overflow-x: hidden;
 		overflow-y: auto;
@@ -949,7 +950,7 @@ input, select, textarea {
 		@media screen and (max-width: 980px) {
 
 			#main {
-				background: #252525; /* Middle size panel color */
+				background: #07030f; /* Middle size panel color */
 			}
 
 				#main .toggle {
@@ -967,7 +968,7 @@ input, select, textarea {
 				-ms-transition: opacity 0.5s ease, visibility 0.5s;
 				transition: opacity 0.5s ease, visibility 0.5s;
 				width: 100%;
-				background: #252525; /* Mobile background color */
+				background: #07030f; /* Mobile background color */
 				text-align: center;
 			}
 
@@ -995,7 +996,7 @@ input, select, textarea {
 				-ms-transition: opacity 0.5s ease, visibility 0.5s;
 				transition: opacity 0.5s ease, visibility 0.5s;
 				width: 100%;
-				background: #252525; /* Mobile background color */
+				background: #07030f; /* Mobile background color */
 				text-align: center;
 			}
 
@@ -1026,7 +1027,7 @@ input, select, textarea {
 		-webkit-overflow-scrolling: touch;
 		top: 0;
 		height: 100%;
-		background: #252525; /* the side panel background color */
+		background: #07030f; /* the side panel background color */
 		outline: 0;
 		overflow-x: hidden;
 		overflow-y: auto;
@@ -1045,7 +1046,7 @@ input, select, textarea {
 		@media screen and (max-width: 980px) {
 
 			#about {
-				background: #252525; /* Middle size panel color */
+				background: #07030f; /* Middle size panel color */
 			}
 		}
 
@@ -1056,7 +1057,7 @@ input, select, textarea {
 				-webkit-transition: opacity 0.5s ease, visibility 0.5s;
 				-ms-transition: opacity 0.5s ease, visibility 0.5s;
 				transition: opacity 0.5s ease, visibility 0.5s;
-				background: #252525; /* Mobile background color */
+				background: #07030f; /* Mobile background color */
 				text-align: center;
 			}
 		}	
@@ -1068,7 +1069,7 @@ input, select, textarea {
 				-webkit-transition: opacity 0.5s ease, visibility 0.5s;
 				-ms-transition: opacity 0.5s ease, visibility 0.5s;
 				transition: opacity 0.5s ease, visibility 0.5s;
-				background: #252525; /* Mobile background color */
+				background: #07030f; /* Mobile background color */
 				text-align: center;
 			}
 		}		
@@ -1079,6 +1080,9 @@ input, select, textarea {
 	    background-color: #333;
 	    font-family: Arial, Helvetica, sans-serif;
 	    max-width: 100%;
+	    z-index: 10;
+	    position: fixed;
+	    width: 100%;
 	}
 
 	.navbar a {							/* Home/ About button */
@@ -1349,6 +1353,10 @@ input, select, textarea {
 
 	#footer {
 		padding: 2.25em 2.25em 1em 2.25em ;
+		position: fixed;
+		bottom: 0;
+		width: 100%;
+
 	}
 
 		#footer .copyright {
