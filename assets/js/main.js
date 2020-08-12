@@ -221,7 +221,7 @@ var main = (function($) { var _ = {
 			// Hide main wrapper on tap (<= small only).
 				_.$viewer.on('touchend', function() {
 
-					if (breakpoints.active('<=xsmall'))
+					if (breakpoints.active('<=xlarge'))
 						_.toggleui();
 
 				});
@@ -286,7 +286,7 @@ var main = (function($) { var _ = {
 					.on('touchstart', function(event) {
 
 						// Bail on xsmall.
-							if (breakpoints.active('<=xsmall'))
+							if (breakpoints.active('<=xlarge'))
 								return;
 
 						// Record start position.
@@ -297,7 +297,7 @@ var main = (function($) { var _ = {
 					.on('touchmove', function(event) {
 
 						// Bail on xsmall.
-							if (breakpoints.active('<=xsmall'))
+							if (breakpoints.active('<=xlarge'))
 								return;
 
 						// No start position recorded? Bail.
@@ -373,7 +373,7 @@ var main = (function($) { var _ = {
 			_.$window.on('keydown', function(event) {
 
 				// Ignore if xsmall is active.
-					if (breakpoints.active('<=xsmall'))
+					if (breakpoints.active('<=xlarge'))
 						return;
 
 				// Check keycode.
@@ -524,7 +524,7 @@ var main = (function($) { var _ = {
 
 		// Already at index and xsmall isn't active? Bail.
 			if (_.current == index
-			&&	!breakpoints.active('<=small'))
+			&&	!breakpoints.active('<=medium'))
 				return;
 
 		// Locked? Bail.
